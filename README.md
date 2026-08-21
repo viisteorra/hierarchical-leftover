@@ -12,7 +12,21 @@ The Hubble *scale* split on this lock is leftover of two readings, not two unive
 
 P is an identification, not a theorem of GR or QFT. If P is false, the numbers are a coincidence.
 
-Spine: [`docs/THEORY.md`](docs/THEORY.md). Hubble sentence: [`docs/CLAIM.md`](docs/CLAIM.md).
+The vacuum assumes this geometry **because it resonates**: an octave-addressed hierarchy with one tonic, not a bag of fitted constants. Why \(12\), \(1:11\), \(49/71\), and the two leftover evaluations are forced — and how to extend the theory without fishing — is [`docs/FIRST_PRINCIPLES.md`](docs/FIRST_PRINCIPLES.md). Spine: [`docs/THEORY.md`](docs/THEORY.md). Hubble sentence: [`docs/CLAIM.md`](docs/CLAIM.md).
+
+## From first principles (short)
+
+Resonance, not a fit:
+
+1. **Octave \(2:1\).** Linear waves: the first overtone is the unique same pitch class. A resonant vacuum periods on that octave, not on \(e\) or \(10\).
+2. **Fifth \(3:2\).** Next integer ratio. Closing fifths against octaves is \(\log_2(3/2)\).
+3. **Period \(12\).** First continued-fraction convergent of \(\log_2(3/2)\) *after* \(3/5\) is \(7/12\). Semi-convergents (\(4/7\)) are not best approximations. No cents cut is an input.
+4. **Squares \(q=4,5\).** Metric leftover uses Euclidean hypercubes \(q=2d\) \(\Rightarrow\) \(2\)D is the square. First hyperbolic square tiling is \(q=5\). Generation \(r=2/q\).
+5. **One seed \(\Rightarrow 1:11\).** A period has one identity. Other fills are other axioms, not a \(\chi^2\) scan. SN’s own \(\Omega\) minimum is \(\approx 0.669\), not \(49/71\).
+6. **Tail \(G(\rho)=1/(1-\rho)\).** The geometric series of the resonance repeating. \(\Omega_{DE}=G(r)-1=49/71\). \(w=-1\) because the period does not drift. \(k=0\) because metric leftover is Euclidean.
+7. **Leftover.** Scale invariance forbids leftover without a second scale: photon decoupling, not \(H_0\). Same \(G\), two licensed ratios: \(r/11\) (finite generators, BAO) and \(\ln G(r)\) (infinite dimensions, \(\theta_*\)). This octave (SN) has \(f=1\).
+
+None of those numbers is a Hubble ratio. \(f=2^{\{\log_2(1+z_*)\}e}\) is fixed before \(H_0\).
 
 ## Density
 

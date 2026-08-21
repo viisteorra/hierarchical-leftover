@@ -102,6 +102,7 @@ def test_axioms_document_exists():
     assert "{4,5}" in text or "q=5" in text
     assert "one primitive" in text.lower() or "The one primitive" in text
     assert "sound horizon" in text or "sound-horizon" in text
+    assert "resonat" in text.lower()
 
 
 def test_only_primitive_is_p():

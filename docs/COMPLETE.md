@@ -2,7 +2,7 @@
 
 The theorem of this universe, under primitive **P**, is complete. There is no further \(f\).
 
-Spine: `THEORY.md`. Proofs: `THEOREM.md`. Hubble sentence: `CLAIM.md`. Uniqueness: `AXIOMS.md`. Code: `src/generate.py`, `src/geometry.py`, `src/uniqueness.py`.
+Spine: `THEORY.md`. First principles: `FIRST_PRINCIPLES.md`. Proofs: `THEOREM.md`. Hubble sentence: `CLAIM.md`. Uniqueness: `AXIOMS.md`. Code: `src/generate.py`, `src/geometry.py`, `src/uniqueness.py`.
 
 ## What is in the theorem
 

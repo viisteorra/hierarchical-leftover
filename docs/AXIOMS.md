@@ -6,9 +6,9 @@ You do not prove axioms **in the same system**. You prove them *elsewhere* (wave
 
 ## The one primitive (cannot be proved)
 
-**P.** The vacuum *is* this hierarchy, and its residual tail is the present dark-energy density.
+**P.** The vacuum *resonates*. It *is* this octave-addressed hierarchy, and the residual tail of that resonance is the present dark-energy density.
 
-Maths cannot extract P from GR or from QFT (the cosmological-constant problem is a different number). P is the dictionary between a combinatorial tail and \(T_{\mu\nu}\). Everything below is from P plus *elsewhere*.
+The vacuum assumes this geometry because a resonator has a period, a tonic, overtones, and a tail — not because those integers were fitted to a catalogue. Maths cannot extract P from GR or from QFT (the cosmological-constant problem is a different number). P is the dictionary between a combinatorial tail and \(T_{\mu\nu}\). Everything below is from P plus *elsewhere*. Walk-through: `FIRST_PRINCIPLES.md`.
 
 ## Proved elsewhere (no longer axioms)
 

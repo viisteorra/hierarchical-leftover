@@ -2,6 +2,7 @@
 
 | File | What it is |
 |---|---|
+| [FIRST_PRINCIPLES.md](FIRST_PRINCIPLES.md) | Resonance \(\to\) every locked number; why not arbitrary; how to extend |
 | [THEORY.md](THEORY.md) | Spine: one generating function \(G\), two leftovers, \(k=0\) |
 | [THEOREM.md](THEOREM.md) | Proofs (density, leftover, Hubble scale) |
 | [AXIOMS.md](AXIOMS.md) | Primitive P and uniqueness lemmas U1–U3 |

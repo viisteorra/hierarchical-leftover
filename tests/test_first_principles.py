@@ -73,6 +73,16 @@ def test_lock_is_the_u3_algebra():
     assert period_from_fifth_convergent()[0] == 12
 
 
+def test_first_principles_document():
+    text = (ROOT / "docs" / "FIRST_PRINCIPLES.md").read_text()
+    assert "resonat" in text.lower()
+    assert "7/12" in text
+    assert "1:11" in text
+    assert "not arbitrary" in text.lower() or "not a fit" in text.lower()
+    assert "How to take it further" in text
+    assert "log_2(3/2)" in text or r"\log_2(3/2)" in text
+
+
 def test_chain_has_one_primitive():
     chain = derivation_chain()
     assert sum(1 for row in chain if row["free"]) == 1

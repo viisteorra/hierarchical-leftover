@@ -1,6 +1,8 @@
 # The theory (one generating function)
 
-Primitive **P**: the vacuum is this hierarchy; its residual tail is \(\Omega_{DE}\). Everything below is lemmas + one measurement \(z_*\). This file is the spine. Proofs: `THEOREM.md`. Hubble sentence: `CLAIM.md`.
+Primitive **P**: the vacuum *resonates*; it is this octave-addressed hierarchy, and the residual tail of that resonance is \(\Omega_{DE}\). The geometry is assumed *because of that resonance*, not because a catalogue preferred these integers. Everything below is lemmas + one measurement \(z_*\).
+
+Why the values are not arbitrary, and how to take it further: `FIRST_PRINCIPLES.md`. Proofs: `THEOREM.md`. Hubble sentence: `CLAIM.md`.
 
 ## Hierarchy
 
@@ -36,8 +38,8 @@ H_{0,L}=f\,H_{0,E}.
 
 ## Closed
 
-Given P, the theorem is complete. There is no further \(f\), no further fill, no further period. New probes reuse the table above.
+Given P, the theorem is complete. There is no further \(f\), no further fill, no further period. New probes reuse the table above: classify the generating set, do not minimise \(\chi^2\). Analogous theory: swap one uniqueness lemma (e.g. \(53\)-fold) and copy \(G\).
 
-Not remaining work (and not this theorem): proving P from GR/QFT; official DESI full covariance / Planck \(C_\ell\); putting leftover on public GitHub.
+Not remaining work (and not this theorem): proving P from GR/QFT; official DESI full covariance / Planck \(C_\ell\).
 
 Code: `src/generate.py`.
