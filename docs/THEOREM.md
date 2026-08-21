@@ -50,7 +50,7 @@ e_\square=\frac{12}{11}\,G\!\left(\frac{r}{11}\right),
 e_\infty=1+(1-r)\ln G(r).
 \]
 
-**Identities.** \(G(r)-1=r/(1-r)\). Finite: \((12/11)/(1-r/11)=(12/11)G(r/11)=1440/1271\). Infinite: \(\ln G(r)=-\ln(1-r)\), hence \(1+(1-r)\ln G(r)=1-(1-r)\ln(1-r)\).
+**Identities.** \(G(r)-1=r/(1-r)\). Finite: \((12/11)G(r/11)\). At the discrete mix \(r=49/120\) that is \(1440/1271\). Infinite: \(\ln G(r)=-\ln(1-r)\), hence \(1+(1-r)\ln G(r)=1-(1-r)\ln(1-r)\). The density lock is \(T=\ln 2\), not \(49/71\).
 
 **No third leftover.** U1–U3 put two ratios into \(G\): \(r\) (density) and \(r/11\) (leftover on the 11 generators). \(G(r/12)\) is the clock-unit foil (Lemma 3). \(T/N\) is not an evaluation of \(G\). Spine: `THEORY.md`. Code: `src/generate.py`.
 

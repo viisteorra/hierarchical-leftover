@@ -58,6 +58,21 @@ def test_fit_rd_recovers_truth():
     assert fit["chi2"] < 1e-6
 
 
+def test_official_dr2_cov_is_13x13():
+    from pathlib import Path
+
+    from bao import bao_chi2_official, load_desi_dr2_official
+
+    mean_path = Path(__file__).resolve().parents[1] / "data" / "desi_bao_dr2" / "desi_gaussian_bao_ALL_GCcomb_mean.txt"
+    if not mean_path.exists():
+        return
+    mean, cov = load_desi_dr2_official()
+    assert mean.shape == (13,)
+    assert cov.shape == (13, 13)
+    chi = bao_chi2_official(70.0, 147.09)
+    assert chi > 0.0
+
+
 def test_h0_rd_degeneracy_on_shape():
     """Rescaling H0 and rd together leaves BAO ratios unchanged at fixed Ω_DE."""
     z = 0.93

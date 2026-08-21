@@ -37,6 +37,7 @@ from likelihood import (  # noqa: E402
     load_des_dovekie,
     load_pantheon_plus,
 )
+from generate import leftover_exp_finite  # noqa: E402
 from ruler import (  # noqa: E402
     leftover_exp_infinite,
     leftover_exp_planar,
@@ -60,9 +61,10 @@ from spacetime import (  # noqa: E402
 
 RESULTS = ROOT / "results"
 DATA = ROOT / "data"
-H0_SN = 73.47106273986928
-H0_TH = 67.5991
-SIG_SN, SIG_BAO, SIG_TH = 1.04, 0.217, 0.54
+from hubble import H0_SN, H0_TH_LOCK, SIG_BAO, SIG_SN  # noqa: E402
+
+H0_TH = H0_TH_LOCK
+SIG_TH = 0.54
 VALCIN, VALCIN_E = 13.57, math.sqrt(0.15**2 + 0.23**2)
 VALCIN_TGC, VALCIN_TGC_E = 13.39, math.sqrt(0.10**2 + 0.23**2)
 PLANCK_OMMH2, PLANCK_OMMH2_S = 0.1430, 0.0011
@@ -113,7 +115,7 @@ def camb_pack(H0: float) -> dict:
 def main() -> int:
     RESULTS.mkdir(parents=True, exist_ok=True)
     print("=" * 72)
-    print("HELL  locked 49/71 + two-measure leftover")
+    print("HELL  locked ln(2) + two-measure leftover")
     print("=" * 72)
 
     # --- pytest ---
@@ -130,9 +132,9 @@ def main() -> int:
     # --- freeze ---
     print("\n--- H1  freeze ---")
     knife("H1_1_11", Q4_WEIGHT != 1 or Q5_WEIGHT != 11 or TOTAL != 12, "1:11/12")
-    knife("H1_T", abs(OMEGA_DE_TODAY - 49 / 71) >= 1e-12, f"T={OMEGA_DE_TODAY}")
-    knife("H1_r", abs(R_GEN - 49 / 120) >= 1e-12, f"r={R_GEN}")
-    knife("H1_planar_e", abs(leftover_exp_planar() - 1440 / 1271) >= 1e-12, "1440/1271")
+    knife("H1_T", abs(OMEGA_DE_TODAY - __import__("math").log(2.0)) >= 1e-12, f"T={OMEGA_DE_TODAY}")
+    knife("H1_r", abs(R_GEN - __import__("math").log(2.0) / (1.0 + __import__("math").log(2.0))) >= 1e-12, f"r={R_GEN}")
+    knife("H1_planar_e", abs(leftover_exp_planar() - leftover_exp_finite()) >= 1e-12, "planar G")
 
     like = SNLikelihood(
         load_pantheon_plus(DATA / "Pantheon+SH0ES.dat", DATA / "Pantheon+SH0ES_STAT+SYS.cov")

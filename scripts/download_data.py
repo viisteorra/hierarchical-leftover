@@ -64,7 +64,19 @@ def main() -> int:
     _download(COV_URL, DATA_DIR / COV_NAME, min_bytes=1_000_000)
     _download(DES_HD_URL, DATA_DIR / DES_HD_NAME, min_bytes=50_000)
     _download(DES_NPZ_URL, DATA_DIR / DES_NPZ_NAME, min_bytes=1_000_000)
-    print("Pantheon+ and DES-SN5YR data ready.")
+    desi = DATA_DIR / "desi_bao_dr2"
+    desi.mkdir(parents=True, exist_ok=True)
+    _download(
+        "https://raw.githubusercontent.com/CobayaSampler/bao_data/master/desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_mean.txt",
+        desi / "desi_gaussian_bao_ALL_GCcomb_mean.txt",
+        min_bytes=200,
+    )
+    _download(
+        "https://raw.githubusercontent.com/CobayaSampler/bao_data/master/desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_cov.txt",
+        desi / "desi_gaussian_bao_ALL_GCcomb_cov.txt",
+        min_bytes=200,
+    )
+    print("Pantheon+, DES-SN5YR, and DESI DR2 official BAO covariance ready.")
     return 0
 
 

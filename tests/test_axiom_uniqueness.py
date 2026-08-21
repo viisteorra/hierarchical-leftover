@@ -81,8 +81,12 @@ def test_u3_tail_is_49_over_71():
     assert T_FRAC == 49 / 71 or T_FRAC == __import__("fractions").Fraction(49, 71)
     assert abs(float(T_FRAC) - 49 / 71) < 1e-15
     assert abs(float(R_FRAC) - 49 / 120) < 1e-15
-    assert abs(OMEGA_DE_TODAY - 49 / 71) < 1e-15
-    assert abs(r - 49 / 120) < 1e-15
+    import math
+    from geometry import R_DISCRETE
+
+    assert abs(OMEGA_DE_TODAY - math.log(2.0)) < 1e-15
+    assert abs(R_DISCRETE - 49 / 120) < 1e-15
+    assert abs(r - math.log(2.0) / (1.0 + math.log(2.0))) < 1e-15
     fills = mixed_fills(12)
     assert fills[0] == (1, 11)
     assert (2, 10) in fills and (6, 6) in fills
@@ -111,6 +115,7 @@ def test_only_primitive_is_p():
     assert len(free) == 1
     assert free[0]["symbol"] == "P"
     assert any(row["symbol"] == "period N" and row["value"] == 12 for row in chain)
-    assert any(row["symbol"] == "T=Ω_DE" and "49/71" in str(row["value"]) for row in chain)
+    assert any(row["symbol"] == "T=Ω_DE" and "ln(2)" in str(row["value"]) for row in chain)
+    assert any(row["symbol"] == "12-fold" and "49/71" in str(row["value"]) for row in chain)
     assert any(row["symbol"] == "G" for row in chain)
     assert any(row["symbol"] == "k" and row["value"] == 0 for row in chain)

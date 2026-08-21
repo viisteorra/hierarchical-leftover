@@ -6,7 +6,7 @@ the scale. SN tests both. The early–early H0 ratio is the measure ratio.
     H0_L = f_□ H0_E,BAO = f_∞ H0_E,θ*
     H0_E,BAO / H0_E,θ* = f_∞ / f_□
 
-No χ² in f. No T/10. Density stays 49/71.
+No χ² in f. No T/10. Density is ln(2).
 """
 
 from __future__ import annotations
@@ -17,7 +17,7 @@ from spacetime import F_BAO, F_CMB
 
 # Hubble-tension error budget: SH0ES calibration, not intercept scatter.
 SIG_SN = 1.04
-SIG_BAO = 0.217
+SIG_BAO = 0.190  # official DESI DR2 ALL_GCcomb, Δχ²=1 at lock
 SIG_PLANCK_H0 = 0.54
 PLANCK2018_H0 = 67.36
 PLANCK_100THETA = 1.04110
@@ -27,11 +27,11 @@ PLANCK_RD_SIG = 0.26
 PLANCK_OMMH2 = 0.1430
 PLANCK_OMMH2_SIG = 0.0011
 
-# Frozen intercepts of this lock. Scripts recompute; tests use these so
-# pytest does not refit Pantheon+ or CAMB.
-H0_SN = 73.47106273986928
-H0_BAO = 68.38338180546
-H0_TH_LOCK = 67.5991  # CAMB bisection at lock Ω → 100θ* = 1.04110
+# Frozen intercepts of the continuous lock. Scripts recompute; tests use
+# these so pytest does not refit Pantheon+ or CAMB.
+H0_SN = 73.50430785786638
+H0_BAO = 68.53650184574981  # official DESI DR2 cov + Planck rd
+H0_TH_LOCK = 67.79577217102053  # CAMB bisection at ln(2) → 100θ* = 1.04110
 
 
 def tension(a: float, b: float, sa: float, sb: float) -> float:

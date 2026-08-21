@@ -61,13 +61,20 @@ Other mixed fills \(2:10,\ldots,11:1\) exist. They are **other axioms**. They ar
 
 ### 6. The tail is \(G\), not a second idea
 
+The *continuous* residual of binary scaling is the Haar measure of one doubling:
+
 \[
-r=\frac{1\cdot(2/4)+11\cdot(2/5)}{12}=\frac{49}{120},\qquad
-G(\rho)=\frac{1}{1-\rho}=\sum_{k=0}^{\infty}\rho^k,\qquad
-T=G(r)-1=\frac{49}{71}.
+\Omega_{DE}=T=\ln 2,\qquad r=\frac{\ln 2}{1+\ln 2},\qquad
+G(\rho)=\frac{1}{1-\rho}=\sum_{k=0}^{\infty}\rho^k,\qquad T=G(r)-1.
 \]
 
-\(G\) is the geometric series of the resonance repeating. Density **is** that series. \(49=7^2\) is not a reason and is not used. Flatness (\(k=0\)) closes \(\Omega_m=22/71\).
+The 12-fold / 1:11 mix is the unique smallest rational approximation of that same resonance (U1–U3):
+
+\[
+r_{12}=\frac{49}{120},\qquad T_{12}=\frac{49}{71}\approx 0.69014=\ln 2-0.0030.
+\]
+
+\(49=7^2\) is not a reason and is not used. Flatness (\(k=0\)) closes \(\Omega_m=1-\ln 2\). The lock is \(\ln 2\), not \(49/71\). Neither is chosen from \(\chi^2\).
 
 If the period is a constant of the hierarchy, it does not drift, so the residual density does not dilute: \(w=-1\).
 
@@ -85,7 +92,7 @@ Same \(G\), two licensed ratios only:
 
 | Generating set | Why | Exponent |
 |---|---|---|
-| Finite: the \(11\) hyperbolic generators | Leftover of the 2D vacuum mix lives on the generators, not the clock (Lemma 3) | \(e_\square=(12/11)\,G(r/11)=1440/1271\) |
+| Finite: the \(11\) hyperbolic generators | Leftover of the 2D vacuum mix lives on the generators, not the clock (Lemma 3) | \(e_\square=(12/11)\,G(r/11)\) |
 | Infinite: dimensions of the metric | The same tail, unbounded, on Euclidean hypercubes \(q=2d\) | \(e_\infty=1+(1-r)\ln G(r)\) |
 
 \(G(r/12)\) is the clock-unit foil (wrong direction after Lemma 3). \(T/N\) (including \(T/10\)) is not an evaluation of \(G\). \(10\notin\{1,2,4,5,11,12\}\).

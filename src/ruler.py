@@ -1,4 +1,4 @@
-"""Octave-remainder ruler. Does not retune 49/71.
+"""Octave-remainder ruler. Does not retune ln(2) or put H0 into f.
 
 Density and leftover are evaluations of G(ρ)=1/(1−ρ) in generate.py.
 This module turns φ={log2(1+z*)} into f=2^{φ e}.
@@ -32,7 +32,7 @@ def leftover_exp_infinite() -> float:
 
 
 def leftover_exp_planar() -> float:
-    """Finite generating set: e_□ = (12/11) G(r/11) = 1440/1271.
+    """Finite generating set: e_□ = (12/11) G(r/11). 1440/1271 at discrete r.
 
     Clock-unit rival G(r/12) is the inverse-direction tail. Do not use T/N.
     """

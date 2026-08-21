@@ -58,7 +58,10 @@ def test_no_h0_in_leftover_formula():
 
 
 def test_exponents_are_the_lemmas():
-    assert abs(leftover_exp_planar() - 1440 / 1271) < 1e-15
+    from generate import G
+    from geometry import r as R_GEN
+
+    assert abs(leftover_exp_planar() - (12 / 11) * G(R_GEN / 11)) < 1e-15
     e = leftover_exp_infinite()
     assert abs(e - (1.0 - (1.0 - r) * __import__("math").log(1.0 - r))) < 1e-15
 
@@ -66,8 +69,10 @@ def test_exponents_are_the_lemmas():
 def test_lock_is_the_u3_algebra():
     assert (Q4_WEIGHT, Q5_WEIGHT, TOTAL) == (1, 11, 12)
     assert (PERIOD_N, SEED, HYPER_STEPS) == (12, 1, 11)
+    import math
+
     assert abs(float(T_FRAC) - 49 / 71) < 1e-15
-    assert abs(OMEGA_DE_TODAY - 49 / 71) < 1e-15
+    assert abs(OMEGA_DE_TODAY - math.log(2.0)) < 1e-15
     assert W == -1.0
     assert square_from_hypercubes() == (4, 5)
     assert period_from_fifth_convergent()[0] == 12

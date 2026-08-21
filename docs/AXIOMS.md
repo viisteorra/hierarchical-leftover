@@ -31,8 +31,10 @@ The vacuum assumes this geometry because a resonator has a period, a tonic, over
 Under P + U1–U3:
 
 \[
-r=\frac{49}{120},\qquad T=\frac{49}{71}=\Omega_{DE}.
+\Omega_{DE}=\ln 2,\qquad r=\frac{\ln 2}{1+\ln 2}.
 \]
+
+The 12-fold algebra \(r=49/120\), \(T=49/71\) is the rational approximation, not the lock.
 
 That is Theorem 1. Leftover formulas are Theorem 2. No \(\chi^2\) in either.
 

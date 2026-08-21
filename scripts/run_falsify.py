@@ -61,13 +61,10 @@ from spacetime import (  # noqa: E402
     ZSTAR_HS_LOCK,
 )
 from ruler import leftover_f, mix_stretch_f, leftover_octave  # noqa: E402
+from hubble import H0_SN, H0_TH_LOCK, SIG_BAO, SIG_SN  # noqa: E402
 
 RESULTS = ROOT / "results"
 DATA = ROOT / "data"
-
-H0_SN = 73.47106273986928
-SIG_SN = 1.04
-SIG_BAO = 0.217
 PLANCK_OMMH2 = 0.1430
 PLANCK_OMMH2_SIGMA = 0.0011
 PLANCK_RD_SIGMA = 0.26
@@ -116,7 +113,7 @@ def main() -> int:
 
     # --- K1, K10: BAO uses f_□, CMB θ* uses f_∞. Do not mix. ---
     print("\n--- K1 / K10  intercept split (measure matches observable) ---")
-    H0_TH = 67.5991
+    H0_TH = H0_TH_LOCK
     splits = {}
     F_BAO_HS = leftover_octave(ZSTAR_HS_LOCK)["f_planar"]
     F_CMB_HS = leftover_f(ZSTAR_HS_LOCK)

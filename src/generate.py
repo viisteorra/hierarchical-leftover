@@ -2,7 +2,7 @@
 
 G(ρ) = 1/(1−ρ)
 
-    T      = G(r) − 1                         Theorem 1
+    T      = G(r) − 1 = ln(2)                 continuous binary-scale residual
     e_□    = (12/11) G(r/11)                  finite generating set (11 steps)
     e_∞    = 1 + (1−r) ln G(r)                infinite generating set (dimensions)
     e_foil = (12/11) G(r/12)                  clock-unit; wrong direction (Lemma 3)
@@ -44,7 +44,7 @@ def spatial_curvature() -> int:
 
 
 def density_tail() -> float:
-    """T = G(r) − 1 = r/(1−r)."""
+    """T = G(r) − 1 = r/(1−r) = ln(2)."""
     return G(R_GEN) - 1.0
 
 

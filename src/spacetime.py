@@ -1,7 +1,7 @@
 """Single continuum. One metric. Same job Einstein’s metric does.
 
 A0  Analogous axioms A–D and uniqueness U1–U3: docs/AXIOMS.md.
-A1  Density: Ω_DE = 49/71, w = −1, flat. geometry.py. 2D vacuum mix.
+A1  Density: Ω_DE = ln(2), w = −1, flat. geometry.py. 12-fold is the rational approx.
 
 A2  Leftover — one generating function G(ρ)=1/(1−ρ), two evaluations:
         T   = G(r)−1

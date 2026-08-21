@@ -54,7 +54,9 @@ def test_two_measure_bao_is_tailed_planar_cmb_is_infinite():
     lo = leftover_octave(ZSTAR_RECOMB)
     from ruler import leftover_exp_planar
     assert abs(F_BAO - 2.0 ** (lo["frac"] * leftover_exp_planar())) < 1e-15
-    assert abs(leftover_exp_planar() - 1440 / 1271) < 1e-15
+    from generate import leftover_exp_finite
+
+    assert abs(leftover_exp_planar() - leftover_exp_finite()) < 1e-15
     assert abs(F_BAO - mix_stretch_f(lo["frac"])) > 1e-4  # tail is not bare 12/11
     assert abs(F_CMB - leftover_f(ZSTAR_RECOMB)) < 1e-15
     assert abs(F_BAO - F_CMB) > 1e-4
@@ -97,7 +99,7 @@ def test_leftover_f_source_has_no_h0_or_omega():
 
 
 def test_ansatz_is_not_the_theorem():
-    assert abs(F_ANSATZ_T10 - 710 / 661) < 1e-12
+    assert abs(F_ANSATZ_T10 - 1.0 / (1.0 - OMEGA_DE_TODAY / 10.0)) < 1e-12
     assert abs(F_ANSATZ_T10 - tail_per_octave_f()) < 1e-15
     assert abs(F_AXIOM - F_ANSATZ_T10) > 1e-4
 

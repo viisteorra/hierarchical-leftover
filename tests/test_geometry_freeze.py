@@ -14,15 +14,22 @@ def test_source_still_hardcodes_the_1_11_rule():
     text = SRC.read_text()
     assert "Q4_WEIGHT = 1" in text
     assert "Q5_WEIGHT = 11" in text
-    assert "OMEGA_DE_TODAY = r / (1 - r)" in text
+    assert "OMEGA_DE_TODAY = LN2" in text
+    assert "LN2 = math.log(2.0)" in text
     assert "minimize" not in text
     assert "chi2" not in text.lower()
 
 
 def test_exact_rational_tail():
-    assert abs(OMEGA_DE_TODAY - 49 / 71) < 1e-12
+    import math
+    from geometry import T_DISCRETE
+
+    assert abs(OMEGA_DE_TODAY - math.log(2.0)) < 1e-15
+    assert abs(T_DISCRETE - 49 / 71) < 1e-12
     assert Q4_WEIGHT / Q5_WEIGHT == 1 / 11
-    assert abs(r - 49 / 120) < 1e-12
+    from geometry import R_DISCRETE
+
+    assert abs(R_DISCRETE - 49 / 120) < 1e-12
 
 
 def test_leftover_theorem_is_infinite_euclidean_tail():
@@ -36,5 +43,5 @@ def test_leftover_theorem_is_infinite_euclidean_tail():
     st = ST.read_text()
     assert "12/11" in st
     assert "ln(1-r)" in st or "ln(1−r)" in st or "(1-r)" in st
-    assert abs(F_ANSATZ_T10 - 710 / 661) < 1e-12
+    assert abs(F_ANSATZ_T10 - 1.0 / (1.0 - OMEGA_DE_TODAY / 10.0)) < 1e-12
     assert abs(F_AXIOM - F_ANSATZ_T10) > 1e-4

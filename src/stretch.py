@@ -14,16 +14,17 @@ from fractions import Fraction
 
 import numpy as np
 
-from geometry import OMEGA_DE_TODAY, TOTAL
+from geometry import OMEGA_DE_TODAY, T_DISCRETE, TOTAL
 
-# Locked geometric density. Do not change.
+# Discrete 12-fold tail (approximation). Stretch does not retune the lock.
 OMEGA_DE = Fraction(49, 71)
 
 # Octave period — same 12 as the 1:11 mix.
 B = int(TOTAL)
 
-assert abs(float(OMEGA_DE) - OMEGA_DE_TODAY) < 1e-15
+assert abs(float(OMEGA_DE) - T_DISCRETE) < 1e-15
 assert B == 12
+assert abs(OMEGA_DE_TODAY - __import__("math").log(2.0)) < 1e-15
 
 
 def stretch_S(z, delta0: float):

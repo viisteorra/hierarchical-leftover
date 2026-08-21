@@ -1,23 +1,29 @@
-"""DESI DR1 BAO distances. Shape test of the locked Ω_m = 1 − 0.69014.
+"""DESI BAO distances. Shape test of the locked Ω_DE.
 
-Numbers are Table 18 of DESI 2024 III (Adame et al., arXiv:2404.03000),
-the configuration-space fiducial results used in the cosmology paper.
-Lyman-α is DESI 2024 IV (arXiv:2404.03001).
+DR1: Table 18 of DESI 2024 III (Adame et al., arXiv:2404.03000).
+DR2: official Gaussian mean + joint covariance from the DESI DR2 BAO
+release (Abdul-Karim et al. 2025, arXiv:2503.14738), as packaged by
+CobayaSampler/bao_data desi_bao_dr2 ALL_GCcomb.
 
 BAO measures D/rd. With Ω_DE locked, E(z) is fixed, so the only free
 scale is rd (or H0·rd). We never mix a SH0ES H0 with a Planck rd in a
-joint χ² — that is the Hubble tension, not a test of 0.69014.
+joint χ² — that is the Hubble tension, not a test of the density lock.
 """
 
 from __future__ import annotations
 
 from dataclasses import dataclass
+from pathlib import Path
 
 import numpy as np
 from scipy.optimize import minimize_scalar
 
 from cosmology import D_H, D_M, D_V
 from geometry import OMEGA_DE_TODAY
+
+_DR2_DIR = Path(__file__).resolve().parents[1] / "data" / "desi_bao_dr2"
+_DR2_MEAN = _DR2_DIR / "desi_gaussian_bao_ALL_GCcomb_mean.txt"
+_DR2_COV = _DR2_DIR / "desi_gaussian_bao_ALL_GCcomb_cov.txt"
 
 # Planck 2018 TT,TE,EE+lowE+lensing sound horizon (Mpc). Used only for
 # the inverse-distance-ladder H0 readout, not for the shape χ².
@@ -45,8 +51,8 @@ DESI_DR1 = (
     BAOPoint("Lyα", 2.33, "DM_DH", (39.71, 8.52), (0.94, 0.17), -0.477),
 )
 
-# DESI DR2 Table 4 of Abdul-Karim et al. 2025, arXiv:2503.14738.
-# Non-overlapping cosmology set (LRG3+ELG1, not LRG3 and ELG1 separately).
+# DESI DR2 cosmology set (non-overlapping). Table 4 of Abdul-Karim+2025.
+# Joint official covariance (ALL_GCcomb) is used when sample is this tuple.
 DESI_DR2 = (
     BAOPoint("BGS", 0.295, "DV", (7.942,), (0.075,)),
     BAOPoint("LRG1", 0.510, "DM_DH", (13.588, 21.863), (0.167, 0.425), -0.459),
@@ -56,6 +62,64 @@ DESI_DR2 = (
     BAOPoint("QSO", 1.484, "DM_DH", (30.512, 12.817), (0.760, 0.516), -0.500),
     BAOPoint("Lyα", 2.330, "DM_DH", (38.988, 8.632), (0.531, 0.101), -0.431),
 )
+
+# Official ALL_GCcomb order (Lya is DH then DM).
+_DR2_OFFICIAL_SPEC = (
+    (0.295, "DV"),
+    (0.510, "DM"),
+    (0.510, "DH"),
+    (0.706, "DM"),
+    (0.706, "DH"),
+    (0.934, "DM"),
+    (0.934, "DH"),
+    (1.321, "DM"),
+    (1.321, "DH"),
+    (1.484, "DM"),
+    (1.484, "DH"),
+    (2.330, "DH"),
+    (2.330, "DM"),
+)
+
+
+def load_desi_dr2_official() -> tuple[np.ndarray, np.ndarray]:
+    """Official DESI DR2 Gaussian mean vector and 13×13 covariance."""
+    rows = []
+    for line in _DR2_MEAN.read_text().splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        z, val, _kind = line.split()
+        rows.append(float(val))
+    mean = np.array(rows, dtype=float)
+    cov = np.loadtxt(_DR2_COV)
+    if mean.shape[0] != 13 or cov.shape != (13, 13):
+        raise ValueError(f"DESI DR2 official shape mean={mean.shape} cov={cov.shape}")
+    return mean, cov
+
+
+def _theory_official(H0: float, rd: float, omega_de: float, w: float) -> np.ndarray:
+    out = []
+    for z, kind in _DR2_OFFICIAL_SPEC:
+        if kind == "DV":
+            out.append(D_V(z, H0, w=w, omega_de=omega_de) / rd)
+        elif kind == "DM":
+            out.append(D_M(z, H0, w=w, omega_de=omega_de) / rd)
+        elif kind == "DH":
+            out.append(D_H(z, H0, w=w, omega_de=omega_de) / rd)
+        else:
+            raise ValueError(kind)
+    return np.array(out, dtype=float)
+
+
+def bao_chi2_official(
+    H0: float,
+    rd: float,
+    omega_de: float = OMEGA_DE_TODAY,
+    w: float = -1.0,
+) -> float:
+    mean, cov = load_desi_dr2_official()
+    delta = mean - _theory_official(H0, rd, omega_de, w)
+    return float(delta @ np.linalg.solve(cov, delta))
 
 
 def _theory(point: BAOPoint, H0: float, rd: float, omega_de: float, w: float) -> np.ndarray:
@@ -88,6 +152,8 @@ def bao_chi2(
     w: float = -1.0,
     sample=DESI_DR1,
 ) -> float:
+    if sample is DESI_DR2 and _DR2_MEAN.exists() and _DR2_COV.exists():
+        return bao_chi2_official(H0, rd, omega_de=omega_de, w=w)
     total = 0.0
     for point in sample:
         delta = np.array(point.value, dtype=float) - _theory(point, H0, rd, omega_de, w)

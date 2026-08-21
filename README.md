@@ -2,11 +2,13 @@
 
 A 0-parameter geometric lock of the present-day dark-energy density, and a leftover ruler that maps early and local Hubble readings of one flat FRW universe.
 
-**Given primitive P** (the vacuum *is* this hierarchy; its residual tail is \(\Omega_{DE}\)):
+**Given primitive P** (the vacuum resonates on the binary octave; the residual tail is \(\Omega_{DE}\)):
 
 \[
-\Omega_{DE}=\frac{49}{71},\qquad w=-1,\qquad k=0.
+\Omega_{DE}=\ln 2\approx 0.693147,\qquad w=-1,\qquad k=0.
 \]
+
+The 12-fold mix \(49/71\approx 0.69014\) is the unique smallest rational approximation, not the lock.
 
 The Hubble *scale* split on this lock is leftover of two readings, not two universes. Leftover \(f\) does not contain \(H_0\).
 
@@ -23,7 +25,7 @@ Resonance, not a fit:
 3. **Period \(12\).** First continued-fraction convergent of \(\log_2(3/2)\) *after* \(3/5\) is \(7/12\). Semi-convergents (\(4/7\)) are not best approximations. No cents cut is an input.
 4. **Squares \(q=4,5\).** Metric leftover uses Euclidean hypercubes \(q=2d\) \(\Rightarrow\) \(2\)D is the square. First hyperbolic square tiling is \(q=5\). Generation \(r=2/q\).
 5. **One seed \(\Rightarrow 1:11\).** A period has one identity. Other fills are other axioms, not a \(\chi^2\) scan. SN’s own \(\Omega\) minimum is \(\approx 0.669\), not \(49/71\).
-6. **Tail \(G(\rho)=1/(1-\rho)\).** The geometric series of the resonance repeating. \(\Omega_{DE}=G(r)-1=49/71\). \(w=-1\) because the period does not drift. \(k=0\) because metric leftover is Euclidean.
+6. **Tail \(G(\rho)=1/(1-\rho)\).** Continuous residual of one doubling: \(\Omega_{DE}=\ln 2\). \(r=\ln 2/(1+\ln 2)\). The 12-fold gives \(49/71\), a \(0.003\) approximation. \(w=-1\), \(k=0\).
 7. **Leftover.** Scale invariance forbids leftover without a second scale: photon decoupling, not \(H_0\). Same \(G\), two licensed ratios: \(r/11\) (finite generators, BAO) and \(\ln G(r)\) (infinite dimensions, \(\theta_*\)). This octave (SN) has \(f=1\).
 
 None of those numbers is a Hubble ratio. \(f=2^{\{\log_2(1+z_*)\}e}\) is fixed before \(H_0\).
@@ -33,20 +35,20 @@ None of those numbers is a Hubble ratio. \(f=2^{\{\log_2(1+z_*)\}e}\) is fixed b
 One Euclidean seed on a 12-fold period of square coordinations \(q=4,5\) (1:11). The 12 is the first continued-fraction convergent of \(\log_2(3/2)\) after \(3/5\). Generation multiplier \(r=2/q\). The hierarchical tail is the generating function \(G(\rho)=1/(1-\rho)\):
 
 \[
-r=\frac{49}{120},\qquad T=G(r)-1=\frac{49}{71}.
+r=\frac{\ln 2}{1+\ln 2},\qquad T=G(r)-1=\ln 2.
 \]
 
-That lock is hard-coded in `src/geometry.py` and is never a fit parameter. SN’s own \(\Omega\) minimum is \(\approx 0.669\), not \(49/71\).
+That lock is hard-coded in `src/geometry.py` and is never a fit parameter. SN’s own \(\Omega\) minimum is \(\approx 0.669\), not \(\ln 2\).
 
 Joint Pantheon+ SH0ES + DESI DR2 BAO + CMB \(R\): lock \(\Delta\chi^2\approx 0.05\).
 
 ```python
-Q4_WEIGHT = 1
-Q5_WEIGHT = 11
-r = (Q4_WEIGHT * (2/4) + Q5_WEIGHT * (2/5)) / 12   # 49/120
-OMEGA_DE_TODAY = r / (1 - r)                        # 49/71
+LN2 = math.log(2.0)
+OMEGA_DE_TODAY = LN2
+r = LN2 / (1.0 + LN2)
 W = -1.0
 K_CURVATURE = 0
+# 12-fold / 1:11 remains the rational approximation (T=49/71), not the lock.
 ```
 
 ## Leftover and Hubble
@@ -55,7 +57,7 @@ Integer octaves of \(a(t)\) already sit in the metric. Leftover is \(\varphi=\{\
 
 | Set | Exponent | Probe |
 |---|---|---|
-| Finite (11 generators) | \(e_\square=(12/11)G(r/11)=1440/1271\) | BAO spatial slices |
+| Finite (11 generators) | \(e_\square=(12/11)G(r/11)\) | BAO spatial slices |
 | Infinite (dimensions) | \(e_\infty=1+(1-r)\ln G(r)\) | CMB \(\theta_*\) |
 | This octave | \(f=1\) | SN, time delays |
 
@@ -65,9 +67,10 @@ f=2^{\varphi e},\qquad H_{0,L}=f\,H_{0,E}.
 
 | | Raw | After leftover |
 |---|---|---|
-| SN vs DESI+\(r_d\) | \(4.79\sigma\) | **\(0.01\sigma\)** |
-| SN \(\to\) CAMB \(100\theta_*\) | \(5.01\sigma\) as \(H_0\) | **\(+0.69\sigma\)** |
-| BAO pair \(\Delta\chi^2\) | — | **\(+0.00\)** |
+| SN vs DESI+\(r_d\) (official cov) | \(4.70\sigma\) | **\(0.12\sigma\)** |
+| SN vs \(\theta_*\) as \(H_0\) | \(\sim 4.9\sigma\) | **\(0.13\sigma\)** |
+| SN \(\to\) CAMB \(100\theta_*\) | that split | **\(-3.32\sigma\)** |
+| BAO pair \(\Delta\chi^2\) | — | **\(+0.36\)** |
 
 Dumping DESI \(H_0=68.38\) into CAMB is the mixed frame (\(+18.6\sigma\) on \(\theta_*\)). Leftover does not eat that. There is no third leftover \(f\).
 

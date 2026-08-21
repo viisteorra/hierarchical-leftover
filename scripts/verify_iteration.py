@@ -28,15 +28,16 @@ def main() -> int:
         fail("1:11 weights changed in geometry.py")
     if "chi2" in geo.lower() or "minimize" in geo:
         fail("geometry.py must not contain a fit")
-    if abs(OMEGA_DE_TODAY - 49 / 71) >= 1e-12:
-        fail(f"Ω_DE drifted: {OMEGA_DE_TODAY}")
+    import math as _math
+    if abs(OMEGA_DE_TODAY - _math.log(2.0)) >= 1e-15:
+        fail(f"Ω_DE drifted from ln(2): {OMEGA_DE_TODAY}")
     if W != -1.0:
         fail("w drifted from -1")
     if K_CURVATURE != 0:
         fail("spatial curvature drifted from k=0")
     if not (ROOT / "docs" / "SOLVED.md").exists():
         fail("SOLVED.md missing")
-    if abs(r - 49 / 120) >= 1e-12:
+    if abs(r - _math.log(2.0) / (1.0 + _math.log(2.0))) >= 1e-15:
         fail(f"r drifted: {r}")
     if TOTAL != 12 or Q4_WEIGHT / Q5_WEIGHT != 1 / 11:
         fail("period/mix drifted")
@@ -50,10 +51,10 @@ def main() -> int:
         fail("U3: one-seed fill drifted")
     if abs(float(T_FRAC) - 49 / 71) >= 1e-15:
         fail("U3 tail drifted")
-    if abs(density_tail() - 49 / 71) >= 1e-15:
-        fail("G(r)-1 drifted from 49/71")
-    if abs(leftover_exp_finite() - 1440 / 1271) >= 1e-15:
-        fail("G planar leftover drifted from 1440/1271")
+    if abs(density_tail() - _math.log(2.0)) >= 1e-15:
+        fail("G(r)-1 drifted from ln(2)")
+    if abs(leftover_exp_finite() - (12 / 11) * G(r / 11)) >= 1e-15:
+        fail("G planar leftover drifted from (12/11)G(r/11)")
     if abs(g_inf() - leftover_exp_infinite()) >= 1e-15:
         fail("G infinite leftover drifted from ruler")
     if abs(g_inf() - (1.0 + (1.0 - r) * __import__("math").log(G(r)))) >= 1e-15:
@@ -79,8 +80,8 @@ def main() -> int:
     if abs(F_CMB - leftover_f(ZSTAR_RECOMB)) >= 1e-15:
         fail("F_CMB is not infinite leftover")
     from ruler import leftover_exp_planar
-    if abs(leftover_exp_planar() - 1440 / 1271) >= 1e-15:
-        fail("planar leftover exponent drifted from 1440/1271")
+    if abs(leftover_exp_planar() - leftover_exp_finite()) >= 1e-15:
+        fail("planar leftover exponent drifted from generate")
     if abs(F_BAO - 2.0 ** (lo["frac"] * leftover_exp_planar())) >= 1e-15:
         fail("F_BAO is not tailed planar leftover")
     if abs(F_BAO - F_MIXED_2D) <= 1e-4:
@@ -95,7 +96,7 @@ def main() -> int:
         fail("infinite leftover collapsed onto 2D mix")
     if abs(F_AXIOM - F_FINITE4) <= 1e-4:
         fail("infinite leftover collapsed onto 4D cutoff")
-    if abs(F_ANSATZ_T10 - 710 / 661) >= 1e-12:
+    if abs(F_ANSATZ_T10 - 1.0 / (1.0 - OMEGA_DE_TODAY / 10.0)) >= 1e-12:
         fail("ansatz T/10 drifted")
     if abs(F_AXIOM - F_ANSATZ_T10) <= 1e-4:
         fail("theorem leftover collapsed onto T/10 ansatz")

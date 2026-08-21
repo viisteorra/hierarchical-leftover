@@ -47,7 +47,7 @@ def main() -> int:
     n, k, _ = period_from_fifth_convergent()
     nail("N0_u1_cf", (n, k) != (12, 7), f"period {n}/{k}")
     nail("N0_w", W != -1.0, f"w={W}")
-    nail("N0_T", abs(OMEGA_DE_TODAY - 49 / 71) >= 1e-12, "T")
+    nail("N0_T", abs(OMEGA_DE_TODAY - __import__("math").log(2.0)) >= 1e-12, "T")
 
     print("\n--- N1  leftover source has no H0, no χ² ---")
     geo = (ROOT / "src" / "geometry.py").read_text().lower()
@@ -68,13 +68,13 @@ def main() -> int:
     h0_sn, h0_bao, chi0 = float(sn["H0"]), float(bao["H0"]), float(bao["chi2"])
     s = solution(h0_sn=h0_sn, h0_bao=h0_bao)
 
-    print("\n--- N3  49/71 is not the SN χ² minimum ---")
+    print("\n--- N3  ln(2) is not the SN χ² minimum ---")
     print(f"  lock Ω={OMEGA_DE_TODAY:.5f}  SN-free Ω={sn_free['omega_de']:.5f}  "
           f"Δχ²={sn['chi2']-sn_free['chi2']:.2f}")
     nail(
         "N3_not_sn_fit",
-        abs(sn_free["omega_de"] - 49 / 71) < 0.002,
-        "SN χ² min landed on 49/71 — would look like a fit",
+        abs(sn_free["omega_de"] - OMEGA_DE_TODAY) < 0.002,
+        "SN χ² min landed on ln(2) — would look like a fit",
     )
 
     print("\n--- N4  Hubble scale ---")
