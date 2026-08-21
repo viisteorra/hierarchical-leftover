@@ -1,0 +1,283 @@
+{
+  "n_fired": 0,
+  "n_knives": 46,
+  "knives": [
+    {
+      "id": "H0_pytest",
+      "fired": false,
+      "detail": "...............                                                          [100%]"
+    },
+    {
+      "id": "H1_1_11",
+      "fired": false,
+      "detail": "1:11/12"
+    },
+    {
+      "id": "H1_T",
+      "fired": false,
+      "detail": "T=0.6901408450704227"
+    },
+    {
+      "id": "H1_r",
+      "fired": false,
+      "detail": "r=0.4083333333333334"
+    },
+    {
+      "id": "H1_planar_e",
+      "fired": false,
+      "detail": "1440/1271"
+    },
+    {
+      "id": "H2_bao",
+      "fired": false,
+      "detail": "BAO map 0.008\u03c3"
+    },
+    {
+      "id": "H2_cmb",
+      "fired": false,
+      "detail": "CMB map 0.027\u03c3"
+    },
+    {
+      "id": "H3_k2",
+      "fired": false,
+      "detail": "\u0394\u03c7\u00b2=0.00"
+    },
+    {
+      "id": "H3_hybrid_must_hurt",
+      "fired": false,
+      "detail": "hybrid \u0394=17.88 (must be ugly)"
+    },
+    {
+      "id": "H3_pred_pair",
+      "fired": false,
+      "detail": "predicted pair \u0394=-0.000"
+    },
+    {
+      "id": "H4_foil_beats_both",
+      "fired": false,
+      "detail": "foils []"
+    },
+    {
+      "id": "H5_inf_n",
+      "fired": false,
+      "detail": "f_\u221e span 0.00e+00"
+    },
+    {
+      "id": "H5_pl_n",
+      "fired": false,
+      "detail": "f_\u25a1 span 0.00e+00"
+    },
+    {
+      "id": "H5_not_emp",
+      "fired": false,
+      "detail": "f_\u25a1 identical to H0_SN/H0_E"
+    },
+    {
+      "id": "H6_planck_window",
+      "fired": false,
+      "detail": "catalog z* window printed"
+    },
+    {
+      "id": "H7_dr1",
+      "fired": false,
+      "detail": "DR1 0.15\u03c3 \u0394=0.20"
+    },
+    {
+      "id": "H7_dr12_split",
+      "fired": false,
+      "detail": "DR1\u2212DR2 +0.154"
+    },
+    {
+      "id": "H8_sn_lock",
+      "fired": false,
+      "detail": "SN lock vs free \u03a9"
+    },
+    {
+      "id": "H8_des",
+      "fired": false,
+      "detail": "DES lock vs free \u03a9"
+    },
+    {
+      "id": "H9_low",
+      "fired": false,
+      "detail": "low \u0394=0.09"
+    },
+    {
+      "id": "H9_mid",
+      "fired": false,
+      "detail": "mid \u0394=0.14"
+    },
+    {
+      "id": "H9_high",
+      "fired": false,
+      "detail": "high \u0394=0.74"
+    },
+    {
+      "id": "H9_SH0ES-ish",
+      "fired": false,
+      "detail": "SH0ES-ish \u0394=0.59"
+    },
+    {
+      "id": "H10_R",
+      "fired": false,
+      "detail": "R -0.79\u03c3"
+    },
+    {
+      "id": "H10_wm",
+      "fired": false,
+      "detail": "\u03c9_m BAO-E"
+    },
+    {
+      "id": "H10_age",
+      "fired": false,
+      "detail": "ages"
+    },
+    {
+      "id": "H10_H0LiCOW",
+      "fired": false,
+      "detail": "H0LiCOW 0.10\u03c3"
+    },
+    {
+      "id": "H10_TDCOSMO-1",
+      "fired": false,
+      "detail": "TDCOSMO-1 0.46\u03c3"
+    },
+    {
+      "id": "H10_TD-IV",
+      "fired": false,
+      "detail": "TD-IV 0.18\u03c3"
+    },
+    {
+      "id": "H10_TD-2025",
+      "fired": false,
+      "detail": "TD-2025 0.36\u03c3"
+    },
+    {
+      "id": "H11_BGS",
+      "fired": false,
+      "detail": "BGS \u0394=-0.00"
+    },
+    {
+      "id": "H11_LRG1",
+      "fired": false,
+      "detail": "LRG1 \u0394=0.01"
+    },
+    {
+      "id": "H11_LRG2",
+      "fired": false,
+      "detail": "LRG2 \u0394=-0.07"
+    },
+    {
+      "id": "H11_LRG3+ELG1",
+      "fired": false,
+      "detail": "LRG3+ELG1 \u0394=-0.00"
+    },
+    {
+      "id": "H11_ELG2",
+      "fired": false,
+      "detail": "ELG2 \u0394=0.01"
+    },
+    {
+      "id": "H11_QSO",
+      "fired": false,
+      "detail": "QSO \u0394=0.01"
+    },
+    {
+      "id": "H11_Ly\u03b1",
+      "fired": false,
+      "detail": "Ly\u03b1 \u0394=0.04"
+    },
+    {
+      "id": "H12_theta_lock",
+      "fired": false,
+      "detail": "\u03b8* at 67.60"
+    },
+    {
+      "id": "H12_peak",
+      "fired": false,
+      "detail": "\u2113 peak"
+    },
+    {
+      "id": "H12_early_from_f",
+      "fired": false,
+      "detail": "\u03b8* at H0_SN/f_\u221e +0.7\u03c3"
+    },
+    {
+      "id": "H14_inf_on_bao_k2",
+      "fired": false,
+      "detail": "inf-on-BAO \u0394\u03c7\u00b2=17.88 must be ugly"
+    },
+    {
+      "id": "H14_swap_worse",
+      "fired": false,
+      "detail": "swap not worse on both licensed pairs"
+    },
+    {
+      "id": "H15_u1_cf",
+      "fired": false,
+      "detail": "CF period 12"
+    },
+    {
+      "id": "H15_only_P",
+      "fired": false,
+      "detail": "1 free"
+    },
+    {
+      "id": "H15_not_fit",
+      "fired": false,
+      "detail": "geometry contains a fit"
+    },
+    {
+      "id": "H13_planck_om",
+      "fired": false,
+      "detail": "0.23\u03c3"
+    }
+  ],
+  "maps": {
+    "f_bao": 1.0742676432344287,
+    "f_cmb": 1.086395967391918,
+    "H0_E": 68.38338180546,
+    "H0_TH": 67.5991,
+    "H0_L_bao": 73.46205440855164,
+    "H0_L_cmb": 73.43938963932301,
+    "sig_bao": 0.00847924540000237,
+    "sig_cmb": 0.02702860814900277,
+    "dchi_k2": 0.0021565158917074,
+    "hybrid": 17.877387170347166
+  },
+  "camb": {
+    "theta_lock": {
+      "H0": 67.5991,
+      "100theta": 1.0410998963039721,
+      "rd": 147.30784872853542,
+      "zstar": 1089.8389489807696,
+      "age": 13.796586499452724,
+      "peak_l": 220,
+      "theta_pull": -0.0003345033153693528,
+      "rd_pull": 0.8378797251362121,
+      "zstar_pull": 0.18547133699831606
+    },
+    "SN_over_finf": {
+      "H0": 67.62825428766025,
+      "100theta": 1.04131531258881,
+      "rd": 147.27548295058747,
+      "zstar": 1089.8497472730146,
+      "age": 13.790658073478724,
+      "peak_l": 220,
+      "theta_pull": 0.6945567380968509,
+      "rd_pull": 0.7133959637979632,
+      "zstar_pull": 0.23689177626021687
+    },
+    "BAO_E": {
+      "H0": 68.38338180546,
+      "100theta": 1.0468564931462545,
+      "rd": 146.4405945910053,
+      "zstar": 1090.1260526426138,
+      "age": 13.638858128817263,
+      "peak_l": 219,
+      "theta_pull": 18.569332729853528,
+      "rd_pull": -2.497713111518115,
+      "zstar_pull": 1.5526316314944346
+    }
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "n_fired": 0,
+  "n_nails": 20,
+  "nails": [
+    {
+      "id": "N0_only_P",
+      "fired": false,
+      "detail": "1 free"
+    },
+    {
+      "id": "N0_u1_cf",
+      "fired": false,
+      "detail": "period 12/7"
+    },
+    {
+      "id": "N0_w",
+      "fired": false,
+      "detail": "w=-1.0"
+    },
+    {
+      "id": "N0_T",
+      "fired": false,
+      "detail": "T"
+    },
+    {
+      "id": "N1_geo_fit",
+      "fired": false,
+      "detail": "geometry fit"
+    },
+    {
+      "id": "N1_rul_h0",
+      "fired": false,
+      "detail": "ruler H0"
+    },
+    {
+      "id": "N2_bao",
+      "fired": false,
+      "detail": "BAO"
+    },
+    {
+      "id": "N2_cmb",
+      "fired": false,
+      "detail": "CMB"
+    },
+    {
+      "id": "N3_not_sn_fit",
+      "fired": false,
+      "detail": "SN \u03c7\u00b2 min landed on 49/71 \u2014 would look like a fit"
+    },
+    {
+      "id": "N4_bao",
+      "fired": false,
+      "detail": "0.008\u03c3"
+    },
+    {
+      "id": "N4_cmb_map",
+      "fired": false,
+      "detail": "0.027\u03c3"
+    },
+    {
+      "id": "N4_raw_was_tension",
+      "fired": false,
+      "detail": "raw 4.79\u03c3"
+    },
+    {
+      "id": "N4_closed_vs_raw",
+      "fired": false,
+      "detail": "not 10\u00d7 closed"
+    },
+    {
+      "id": "N5_swap_bao_k2",
+      "fired": false,
+      "detail": "inf-on-BAO \u0394\u03c7\u00b2=17.88 (must be ugly)"
+    },
+    {
+      "id": "N5_swap_bao_worse",
+      "fired": false,
+      "detail": "inf-on-BAO not worse"
+    },
+    {
+      "id": "N5_swap_cmb_worse",
+      "fired": false,
+      "detail": "planar-on-CMB not worse"
+    },
+    {
+      "id": "N5_k2_licensed",
+      "fired": false,
+      "detail": "licensed \u0394\u03c7\u00b2=0.00"
+    },
+    {
+      "id": "N6_zd_beats",
+      "fired": false,
+      "detail": "drag leftover beat photon leftover"
+    },
+    {
+      "id": "N7_theta",
+      "fired": false,
+      "detail": "forward \u03b8* +0.69\u03c3"
+    },
+    {
+      "id": "N7_peak",
+      "fired": false,
+      "detail": "\u2113=220"
+    }
+  ],
+  "solution": {
+    "f_box": 1.0742676432344287,
+    "f_inf": 1.086395967391918,
+    "h0_sn": 73.47106273986928,
+    "h0_bao": 68.38338180546,
+    "h0_th": 67.5991,
+    "pred_sn_from_bao": 73.46205440855164,
+    "pred_sn_from_th": 73.43938963932301,
+    "pred_bao_from_sn": 68.39176736130764,
+    "pred_th_from_sn": 67.62825428766025,
+    "ratio_f": 1.0112898533562578,
+    "ratio_h": 1.0116019563198326,
+    "pred_bao_from_th": 68.36228392601501,
+    "pred_th_from_bao": 67.61996234661109,
+    "raw_bao_sigma": 4.788866399182062,
+    "raw_th_sigma": 5.0109075911153615,
+    "raw_planck_sigma": 5.214946352618537,
+    "map_bao_sigma": 0.00847924540000237,
+    "map_th_sigma": 0.02702860814900277,
+    "fwd_bao_sigma": 0.03864311450524733,
+    "early_early_sigma": 0.03625252498365399,
+    "split_bao_kms": 0.009008331317645002,
+    "split_th_kms": 0.03167310054627137,
+    "raw_split_bao_kms": 5.087680934409278,
+    "raw_split_th_kms": 5.871962739869275
+  },
+  "sn_free_omega": 0.6693908166226306,
+  "swap": {
+    "bao_inf": 0.7721848833425183,
+    "cmb_box": 0.7266689003042175,
+    "dchi_swap": 17.877387170347166,
+    "dchi_lic": 0.0021565158917074
+  },
+  "z_d": {
+    "sigma": 2.15689419021656,
+    "f": 1.0408900716051277
+  },
+  "camb": {
+    "H0": 67.62825428766025,
+    "100theta": 1.04131531258881,
+    "rd": 147.27548295058747,
+    "zstar": 1089.8497472730146,
+    "age": 13.790658073478724,
+    "peak_l": 220,
+    "theta_pull": 0.6945567380968509,
+    "rd_pull": 0.7133959637979632,
+    "zstar_pull": 0.23689177626021687,
+    "wm": 0.14171658748721347,
+    "wm_pull": -1.1667386479877446
+  },
+  "chain": [
+    {
+      "symbol": "P",
+      "value": "vacuum = this hierarchy; tail = \u03a9_DE",
+      "origin": "primitive",
+      "free": true
+    },
+    {
+      "symbol": "octave",
+      "value": "2:1",
+      "origin": "elsewhere: linear waves, given P",
+      "free": false
+    },
+    {
+      "symbol": "fifth",
+      "value": "3:2",
+      "origin": "elsewhere: next integer ratio",
+      "free": false
+    },
+    {
+      "symbol": "period N",
+      "value": 12,
+      "origin": "U1: CF convergent of log2(3/2) after 3/5",
+      "free": false
+    },
+    {
+      "symbol": "q_euclid",
+      "value": 4,
+      "origin": "U2: 2D hypercube q=2d",
+      "free": false
+    },
+    {
+      "symbol": "q_hyper",
+      "value": 5,
+      "origin": "U2: first hyperbolic square {4,5}",
+      "free": false
+    },
+    {
+      "symbol": "fill",
+      "value": "1:11",
+      "origin": "U3: one Euclidean seed",
+      "free": false
+    },
+    {
+      "symbol": "r",
+      "value": "49/120",
+      "origin": "algebra mix r=2/q",
+      "free": false
+    },
+    {
+      "symbol": "T=\u03a9_DE",
+      "value": "49/71",
+      "origin": "algebra T=r/(1-r)",
+      "free": false
+    },
+    {
+      "symbol": "\u03a9_m",
+      "value": "22/71",
+      "origin": "flatness",
+      "free": false
+    },
+    {
+      "symbol": "w",
+      "value": -1,
+      "origin": "lemma: period does not drift",
+      "free": false
+    },
+    {
+      "symbol": "z*",
+      "value": "photon decoupling",
+      "origin": "B: measured second scale, not H0",
+      "free": false
+    },
+    {
+      "symbol": "\u03c6",
+      "value": "{log2(1+z*)}",
+      "origin": "clock leftover identity",
+      "free": false
+    },
+    {
+      "symbol": "e_\u25a1",
+      "value": "1440/1271",
+      "origin": "(12/11)/(1-r/11) generator tail",
+      "free": false
+    },
+    {
+      "symbol": "e_\u221e",
+      "value": "1-(1-r)ln(1-r)",
+      "origin": "infinite tail-weighted hypercubes",
+      "free": false
+    },
+    {
+      "symbol": "f_\u25a1",
+      "value": "2^{\u03c6 e_\u25a1}",
+      "origin": "C: BAO = spatial slices of 2D vacuum",
+      "free": false
+    },
+    {
+      "symbol": "f_\u221e",
+      "value": "2^{\u03c6 e_\u221e}",
+      "origin": "C: \u03b8* = null angle in infinite-D metric",
+      "free": false
+    },
+    {
+      "symbol": "H0 map",
+      "value": "H0_L = f H0_E",
+      "origin": "Theorem 3: two readings, one metric",
+      "free": false
+    }
+  ]
+}

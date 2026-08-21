@@ -1,0 +1,19 @@
+Hierarchical DE — full validation
+Ω_DE = 0.690140845070  (locked, 1 part q=4 + 11 parts q=5)
+
+SN H0 (w=-1)     73.471 +0.109/-0.108 km/s/Mpc   χ²/dof = 0.8842
+SN w             -0.950 +0.050/-0.036   Δχ²(w=-1) = -1.633
+SN free Ω_DE     0.6688 +0.0186/-0.0176   lock Δχ² = +1.344
+Planck 2018 pull +0.75σ
+DESI BAO geom χ² 15.56/11  free Ω_DE = 0.7108
+BAO+Planck rd H0 68.54 km/s/Mpc
+CMB R            1.74649  (-0.81σ vs 1.7502±0.0046)
+t0               12.71 Gyr (SN H0) / 13.87 Gyr (Planck H0)
+
+Viability (present-day density only, not a dynamical DE theory)
+  Planck 2018 Ω_Λ pull: +0.75σ
+  SN lock cost vs free Ω_DE: Δχ² = 1.34
+  SN w vs -1: Δχ² = -1.63
+  DESI BAO lock cost vs free Ω_DE: Δχ² = 1.96
+  CMB R pull at Planck H0: -0.81σ
+  The 1:11 ratio was not varied.

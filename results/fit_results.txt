@@ -1,0 +1,37 @@
+Hierarchical DE — first campaign
+
+r = 0.408333333333
+Ω_DE = 0.690140845070  (locked, 1:11 geometry)
+Ω_M  = 0.309859154930
+
+Experiment 1  (geometric Λ, fit H0)
+  Ω_DE        = 0.69014085
+  w           = -1.000000
+  H0          = 73.4711 km/s/Mpc
+  χ²          = 1405.048
+  N, npar, dof = 1590, 1, 1589
+  χ²/dof      = 0.8842
+  success     = True
+
+Experiment 2  (geometric Ω_DE, free w)
+  Ω_DE        = 0.69014085
+  w           = -0.943357
+  H0          = 73.1615 km/s/Mpc
+  χ²          = 1403.415
+  N, npar, dof = 1590, 2, 1588
+  χ²/dof      = 0.8838
+  success     = True
+  Δχ²         = -1.633
+
+Reference     (Planck Ω_DE ≈ 0.689, w = -1)
+  Ω_DE        = 0.68900000
+  w           = -1.000000
+  H0          = 73.4585 km/s/Mpc
+  χ²          = 1404.902
+  N, npar, dof = 1590, 1, 1589
+  χ²/dof      = 0.8841
+  success     = True
+  Δχ²         = -0.146
+
+The 1:11 ratio was not varied. Δχ² vs Planck tests whether the
+derived density is viable; it is not a license to retune T.

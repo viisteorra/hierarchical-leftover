@@ -1,0 +1,147 @@
+{
+  "lock": 0.6901408450704227,
+  "omega_m": 0.3098591549295773,
+  "probes": {
+    "pantheon_plus": {
+      "best": 0.67,
+      "chi2_min": 1403.7055448660412,
+      "lo": 0.6511031910858707,
+      "hi": 0.6871586205518234,
+      "minus": 0.01889680891412937,
+      "plus": 0.017158620551823378,
+      "bounded_low": false,
+      "bounded_high": false
+    },
+    "des_sn5yr": {
+      "best": 0.67,
+      "chi2_min": 1631.7741136998031,
+      "lo": 0.6559373658212132,
+      "hi": 0.6862044524790109,
+      "minus": 0.014062634178786837,
+      "plus": 0.01620445247901081,
+      "bounded_low": false,
+      "bounded_high": false
+    },
+    "desi_dr1": {
+      "best": 0.71,
+      "chi2_min": 13.608478460439446,
+      "lo": 0.6963448857361163,
+      "hi": 0.7245640310162668,
+      "minus": 0.013655114263883661,
+      "plus": 0.014564031016266799,
+      "bounded_low": false,
+      "bounded_high": false
+    },
+    "desi_dr2": {
+      "best": 0.705,
+      "chi2_min": 10.615049444171985,
+      "lo": 0.6938929405898023,
+      "hi": 0.7110867301224217,
+      "minus": 0.011107059410197628,
+      "plus": 0.00608673012242178,
+      "bounded_low": false,
+      "bounded_high": false
+    },
+    "joint": {
+      "best": 0.69,
+      "chi2_min": 5.525416088869539,
+      "lo": 0.6822015558866942,
+      "hi": 0.6928260312045913,
+      "minus": 0.007798444113305769,
+      "plus": 0.0028260312045913505,
+      "bounded_low": false,
+      "bounded_high": false
+    },
+    "dchi2_lock": {
+      "pantheon_plus": 1.3448698269298585,
+      "des_sn5yr": 1.5796105765393569,
+      "desi_dr1": 1.958638792677961,
+      "desi_dr2": 1.9904542031456474,
+      "cmb_R": 0.6316119678397347,
+      "joint": 0.04983846965099108
+    }
+  },
+  "history": [
+    {
+      "year": 2003,
+      "name": "WMAP1+other",
+      "omega_de": 0.73,
+      "sigma": 0.04,
+      "note": "Spergel et al. 2003",
+      "pull": -0.9964788732394314
+    },
+    {
+      "year": 2013,
+      "name": "WMAP9",
+      "omega_de": 0.721,
+      "sigma": 0.025,
+      "note": "Hinshaw et al. 2013, WMAP-only",
+      "pull": -1.23436619718309
+    },
+    {
+      "year": 2014,
+      "name": "Planck13+WP",
+      "omega_de": 0.686,
+      "sigma": 0.02,
+      "note": "Ade et al. 2014",
+      "pull": 0.2070422535211336
+    },
+    {
+      "year": 2016,
+      "name": "Planck15 TT+lensing",
+      "omega_de": 0.692,
+      "sigma": 0.012,
+      "note": "Ade et al. 2016, \u03a9m=0.308\u00b10.012",
+      "pull": -0.15492957746476854
+    },
+    {
+      "year": 2018,
+      "name": "Planck18 lensing",
+      "omega_de": 0.6847,
+      "sigma": 0.0073,
+      "note": "Aghanim et al. 2020",
+      "pull": 0.7453212425236645
+    },
+    {
+      "year": 2018.5,
+      "name": "Planck18+BAO",
+      "omega_de": 0.6889,
+      "sigma": 0.0056,
+      "note": "Aghanim et al. 2020 + BAO",
+      "pull": 0.22157947686120877
+    },
+    {
+      "year": 2022,
+      "name": "Pantheon+ SN-only",
+      "omega_de": 0.666,
+      "sigma": 0.018,
+      "note": "Brout et al. 2022, \u03a9m=0.334\u00b10.018",
+      "pull": 1.3411580594679273
+    },
+    {
+      "year": 2024,
+      "name": "DES-SN5YR",
+      "omega_de": 0.648,
+      "sigma": 0.017,
+      "note": "Vincenzi et al. 2024, \u03a9m\u22480.352",
+      "pull": 2.4788732394366297
+    },
+    {
+      "year": 2024.5,
+      "name": "DESI DR1 BAO+BBN",
+      "omega_de": 0.705,
+      "sigma": 0.015,
+      "note": "Adame et al. 2025, \u03a9m\u22480.295",
+      "pull": -0.9906103286384823
+    },
+    {
+      "year": 2025,
+      "name": "DESI DR2 BAO+BBN",
+      "omega_de": 0.703,
+      "sigma": 0.009,
+      "note": "Abdul-Karim et al. 2025, \u03a9m\u22480.297",
+      "pull": -1.428794992175248
+    }
+  ],
+  "note_r_of_a": "The given axioms fix today's partition T=r/(1-r). They do not map generation index to scale factor, so r(a) is not derived. The parameter-free completion is constant r, i.e. w=-1."
+}

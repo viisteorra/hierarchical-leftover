@@ -1,0 +1,9 @@
+numpy
+scipy
+pandas
+matplotlib
+astropy
+pytest
+
+# Optional. Needed for scripts/run_hubble.py, run_hell.py (CAMB), run_spectra.py.
+# camb

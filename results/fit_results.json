@@ -1,0 +1,56 @@
+{
+  "geometry": {
+    "Q4_WEIGHT": 1,
+    "Q5_WEIGHT": 11,
+    "TOTAL": 12,
+    "r": 0.4083333333333334,
+    "OMEGA_DE_TODAY": 0.6901408450704227,
+    "OMEGA_M": 0.3098591549295773,
+    "note": "1:11 ratio and \u03a9_DE are geometrically derived and were not fitted"
+  },
+  "data": {
+    "catalogue": "Pantheon+SH0ES",
+    "observable": "MU_SH0ES",
+    "covariance": "STAT+SYS",
+    "zmin": 0.01,
+    "n": 1590,
+    "n_raw": 1701,
+    "z_min_used": 0.01016,
+    "z_max_used": 2.26137
+  },
+  "experiment_1_w_minus_1": {
+    "H0": 73.47106273986928,
+    "w": -1.0,
+    "omega_de": 0.6901408450704227,
+    "chi2": 1405.048135686932,
+    "n": 1590,
+    "npar": 1,
+    "dof": 1589,
+    "chi2_dof": 0.8842341948942304,
+    "success": true
+  },
+  "experiment_2_free_w": {
+    "H0": 73.16148542904607,
+    "w": -0.9433567246258169,
+    "omega_de": 0.6901408450704227,
+    "chi2": 1403.4153639780639,
+    "n": 1590,
+    "npar": 2,
+    "dof": 1588,
+    "chi2_dof": 0.8837628236637681,
+    "success": true
+  },
+  "reference_planck_omega_de": {
+    "H0": 73.45847285617663,
+    "w": -1.0,
+    "omega_de": 0.689,
+    "chi2": 1404.9024999901899,
+    "n": 1590,
+    "npar": 1,
+    "dof": 1589,
+    "chi2_dof": 0.8841425424733731,
+    "success": true
+  },
+  "delta_chi2_free_w_minus_locked_w": -1.6327717088681766,
+  "delta_chi2_planck_minus_geometric": -0.14563569674214705
+}
