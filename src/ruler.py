@@ -40,28 +40,30 @@ def leftover_exp_planar() -> float:
 
 
 def leftover_octave(z_star: float) -> dict:
-    """Integer octaves already live in a(t). Leftover is the non-integer part.
+    """Integer octaves live in a(t). Leftover is the 12-fold remainder of that address.
 
-    Clock identity: 2^{ {log2(1+z)} } = (1+z) / 2^{⌊log2(1+z)⌋}.
-    Infinite-D leftover: 2^{frac · [1 − (1−r) ln(1−r)]}.
+    Binary address: log2(1+z) = n + φ, φ ∈ [0,1).
+    12-fold reading: s = 12 φ steps of the period (not a χ² rounding).
+    Then f = 2^{(s/12) e} = 2^{φ e}. Continuous density; discrete leftover lattice.
     """
     zs = float(z_star)
     octaves = math.log2(1.0 + zs)
     n_int = int(math.floor(octaves))
     frac = octaves - n_int
+    steps_12 = frac * PERIOD
     f_clock = (1.0 + zs) / (2.0 ** n_int)
-    f_mixed = 2.0 ** (frac * DIM_EXP_2)
-    f_planar = 2.0 ** (frac * leftover_exp_planar())
-    f_space = 2.0 ** (frac * DIM_EXP_3)
-    f_st = 2.0 ** (frac * DIM_EXP_4)
-    f_finite4 = 2.0 ** (frac * DIM_EXP_MEAN_4)
-    f_inf = 2.0 ** (frac * leftover_exp_infinite())
+    f_mixed = 2.0 ** ((steps_12 / PERIOD) * DIM_EXP_2)
+    f_planar = 2.0 ** ((steps_12 / PERIOD) * leftover_exp_planar())
+    f_space = 2.0 ** ((steps_12 / PERIOD) * DIM_EXP_3)
+    f_st = 2.0 ** ((steps_12 / PERIOD) * DIM_EXP_4)
+    f_finite4 = 2.0 ** ((steps_12 / PERIOD) * DIM_EXP_MEAN_4)
+    f_inf = 2.0 ** ((steps_12 / PERIOD) * leftover_exp_infinite())
     return {
         "z_star": zs,
         "octaves": octaves,
         "n_int": n_int,
         "frac": frac,
-        "steps_12": frac * PERIOD,
+        "steps_12": steps_12,
         "f_exact": f_clock,
         "f_mixed": f_mixed,
         "f_planar": f_planar,

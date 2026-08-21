@@ -5,10 +5,11 @@ Haar measure of one doubling is ln(2). That residual is Ω_DE today:
 
     Ω_DE = ln(2),   r = ln(2)/(1+ln(2)),   T = r/(1-r) = ln(2).
 
-The 12-fold / 1:11 mix (r=49/120, T=49/71) is the unique smallest
-rational approximation from the fifth (U1–U3). It is not the lock and
-is not retuned from χ². Leftover still refers the clock to those 11
-generators. Do not put H0 into leftover f.
+Density is continuous. Leftover is still 12-fold: the resonator is
+*addressed* in equal 12-fold steps of the binary octave (U1–U3). The
+1:11 mix (r=49/120, T=49/71) is that lattice, not a χ² retune of ln(2).
+Planar leftover lives on the 11 generators of that lattice. Infinite
+leftover uses the continuous mix r. Do not put H0 into leftover f.
 """
 
 from __future__ import annotations
@@ -22,7 +23,7 @@ OMEGA_M = 1.0 - OMEGA_DE_TODAY
 W = -1.0  # period does not drift
 K_CURVATURE = 0  # Euclidean metric leftover
 
-# Discrete rational approximation (U1–U3). Not the density lock.
+# 12-fold leftover lattice (U1–U3). Density lock is ln(2), not this T.
 Q4_WEIGHT = 1
 Q5_WEIGHT = 11
 TOTAL = Q4_WEIGHT + Q5_WEIGHT  # 12

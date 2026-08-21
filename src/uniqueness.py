@@ -151,7 +151,7 @@ def derivation_chain() -> list[dict]:
         {"symbol": "w", "value": -1, "origin": "lemma: period does not drift", "free": False},
         {"symbol": "z*", "value": "photon decoupling", "origin": "B: measured second scale, not H0", "free": False},
         {"symbol": "φ", "value": "{log2(1+z*)}", "origin": "clock leftover identity", "free": False},
-        {"symbol": "e_□", "value": "(12/11)G(r/11)", "origin": "finite generating set", "free": False},
+        {"symbol": "e_□", "value": "1440/1271", "origin": "12-fold leftover (12/11)G(r_12/11)", "free": False},
         {"symbol": "e_∞", "value": "1+(1-r)ln G(r)", "origin": "infinite generating set", "free": False},
         {"symbol": "f_□", "value": "2^{φ e_□}", "origin": "C: finite set (spatial slices / BAO)", "free": False},
         {"symbol": "f_∞", "value": "2^{φ e_∞}", "origin": "C: infinite set (null metric / θ*)", "free": False},

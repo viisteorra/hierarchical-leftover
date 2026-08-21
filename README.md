@@ -53,11 +53,11 @@ K_CURVATURE = 0
 
 ## Leftover and Hubble
 
-Integer octaves of \(a(t)\) already sit in the metric. Leftover is \(\varphi=\{\log_2(1+z_*)\}\) at photon decoupling (\(z_*=1089.84\)). Same \(G\), two evaluations:
+Integer octaves of \(a(t)\) already sit in the metric. Density is continuous \(\ln 2\). **Leftover is still 12-fold:** \(\log_2(1+z_*)=n+\varphi\), \(s=12\varphi\) steps of the period, \(f=2^{(s/12)e}\). Same \(G\), two evaluations:
 
 | Set | Exponent | Probe |
 |---|---|---|
-| Finite (11 generators) | \(e_\square=(12/11)G(r/11)\) | BAO spatial slices |
+| Finite (11 generators of the 12-fold) | \(e_\square=(12/11)G(r_{12}/11)=1440/1271\) | BAO spatial slices |
 | Infinite (dimensions) | \(e_\infty=1+(1-r)\ln G(r)\) | CMB \(\theta_*\) |
 | This octave | \(f=1\) | SN, time delays |
 

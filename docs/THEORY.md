@@ -20,12 +20,16 @@ Octave \(2:1\) (waves). Fifth \(3:2\) (next integer). Period \(12\) = first cont
 T=G(r)-1=\ln 2=\Omega_{DE},\qquad \Omega_m=1-\ln 2,\qquad w=-1.
 \]
 
-Leftover of two readings of a frozen ruler (photon decoupling \(z_*\)): \(\varphi=\{\log_2(1+z_*)\}\), \(f=2^{\varphi e}\).
+Leftover of two readings of a frozen ruler (photon decoupling \(z_*\)). Density is continuous; **the reading is 12-fold:**
+
+\[
+\log_2(1+z_*)=n+\varphi,\qquad s=12\varphi,\qquad f=2^{(s/12)e}.
+\]
 
 | Generating set | Exponent | Probe |
 |---|---|---|
-| Finite (11 hyperbolic steps) | \(e_\square=(12/11)\,G(r/11)\) | spatial slices: BAO, weak lensing |
-| Infinite (dimensions) | \(e_\infty=1+(1-r)\ln G(r)\) | null metric: \(\theta_*\) |
+| Finite (11 hyperbolic steps of the 12-fold) | \(e_\square=(12/11)\,G(r_{12}/11)=1440/1271\) | spatial slices: BAO, weak lensing |
+| Infinite (dimensions, continuous \(r\)) | \(e_\infty=1+(1-r)\ln G(r)\) | null metric: \(\theta_*\) |
 | This octave | \(e=0\Rightarrow f=1\) | SN, time delays |
 
 No third leftover. \(G(r/12)\) is the clock-unit foil (Lemma 3: leftover lives on the 11). Do not mix the two \(f\) on one pair.

@@ -53,8 +53,11 @@ def main() -> int:
         fail("U3 tail drifted")
     if abs(density_tail() - _math.log(2.0)) >= 1e-15:
         fail("G(r)-1 drifted from ln(2)")
-    if abs(leftover_exp_finite() - (12 / 11) * G(r / 11)) >= 1e-15:
-        fail("G planar leftover drifted from (12/11)G(r/11)")
+    from geometry import R_DISCRETE as _RD
+    if abs(leftover_exp_finite() - 1440 / 1271) >= 1e-15:
+        fail("12-fold planar leftover drifted from 1440/1271")
+    if abs(leftover_exp_finite() - (12 / 11) * G(float(_RD) / 11)) >= 1e-15:
+        fail("G planar leftover drifted from (12/11)G(r_12/11)")
     if abs(g_inf() - leftover_exp_infinite()) >= 1e-15:
         fail("G infinite leftover drifted from ruler")
     if abs(g_inf() - (1.0 + (1.0 - r) * __import__("math").log(G(r)))) >= 1e-15:

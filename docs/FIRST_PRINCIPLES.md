@@ -82,13 +82,13 @@ If the period is a constant of the hierarchy, it does not drift, so the residual
 
 A scale-invariant octave has no intrinsic count of octaves between “then” and “now.” Leftover needs a *second scale*. BAO and \(\theta_*\) share the sound-horizon ruler, frozen at photon decoupling. That freeze-out is the second scale. Not \(H_0\). Not \(z_{\mathrm{eq}}\). Drag \(z_d\) is a foil.
 
-Integer octaves already live in \(a(t)\). Leftover is the fractional part
+Integer octaves already live in \(a(t)\). Density is continuous \(\ln 2\). **Leftover is still 12-fold:** the same binary address is *read* in equal 12-fold steps of the period (U1). That lattice is the remnant. It is not discarded with \(49/71\).
 
 \[
-\varphi=\{\log_2(1+z_*)\},\qquad f=2^{\varphi e}.
+\log_2(1+z_*)=n+\varphi,\qquad s=12\varphi,\qquad f=2^{(s/12)e}=2^{\varphi e}.
 \]
 
-Same \(G\), two licensed ratios only:
+\(s\approx 1.095\) steps at \(z_*=1089.84\). Do not round \(s\) to eat a residual (that is \(2^{k/12}\) fishing). Same \(G\), two licensed ratios:
 
 | Generating set | Why | Exponent |
 |---|---|---|

@@ -1,13 +1,12 @@
 """Single continuum. One metric. Same job Einstein’s metric does.
 
 A0  Analogous axioms A–D and uniqueness U1–U3: docs/AXIOMS.md.
-A1  Density: Ω_DE = ln(2), w = −1, flat. geometry.py. 12-fold is the rational approx.
+A1  Density: Ω_DE = ln(2), w = −1, flat. Continuous binary residual.
 
-A2  Leftover — one generating function G(ρ)=1/(1−ρ), two evaluations:
-        T   = G(r)−1
-        e_□ = (12/11) G(r/11)     finite set (BAO / spatial slices)
-        e_∞ = 1+(1-r) ln G(r) = 1-(1-r)ln(1-r)   infinite set (θ* / metric)
-        f   = 2^{φ e}
+A2  Leftover is still 12-fold. Address log2(1+z*) = n+φ, leftover s=12φ steps.
+        e_□ = (12/11) G(r_12/11)=1440/1271   12-fold generators (BAO)
+        e_∞ = 1+(1-r) ln G(r)                continuous mix r (θ*)
+        f   = 2^{(s/12) e} = 2^{φ e}
     No third leftover (r/12 is the Lemma-3 foil). Do not mix on one pair.
     Proof: docs/THEOREM.md, src/generate.py.  z* is recombination, not H0.
 
