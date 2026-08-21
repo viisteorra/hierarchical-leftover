@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""SN Hubble-diagram fits with Ω_DE locked to 49/71.
+"""SN Hubble-diagram fits with Ω_DE locked to ln(2).
 
 1. w = -1, fit H0.
 2. constant w free, still lock Ω_DE.

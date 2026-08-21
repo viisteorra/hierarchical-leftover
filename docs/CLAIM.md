@@ -17,17 +17,17 @@ That is the strongest true statement. It is not “P is a theorem of GR.” It i
 | Period | \(12\) | first CF convergent of \(\log_2(3/2)\) after \(3/5\) |
 | \(q\) | \(4,5\) | 2D hypercube \(q=2d\); first hyperbolic square |
 | Fill | \(1:11\) | one Euclidean seed |
-| \(\Omega_{DE}\) | \(\ln 2\) | continuous binary-scale residual; \(49/71\) is the 12-fold approximation |
+| \(\Omega_{DE}\) | \(\ln 2\) | continuous binary-scale residual (was \(49/71\)) |
 | \(w\) | \(-1\) | period does not drift |
 | \(z_*\) | photon decoupling | measured second scale (not \(H_0\)) |
-| \(e_\square\) | \((12/11)G(r/11)\) | finite generating set (1440/1271 at discrete \(r\)) |
+| \(e_\square\) | \((12/11)G(r/11)\) | leftover addressing \(12/11\), continuous \(r\) (was \(1440/1271\)) |
 | \(e_\infty\) | \(1+(1-r)\ln G(r)\) | infinite generating set |
 | Which \(f\) | BAO\(\to f_\square\), \(\theta_*\to f_\infty\) | finite vs infinite set (Lemma C) |
 | \(k\) | \(0\) | Euclidean metric leftover, not a fit of \(\Omega_k\) |
 | Hubble map | \(H_{0,L}=f\,H_{0,E}\) | Theorem 3, one metric |
 | Next probes | lensing \(\to e_\square\); BBN early; SN \(f=1\) | same \(G\), no third leftover |
 
-No \(\chi^2\) in any row above. SN’s own \(\Omega\) minimum is \(\approx 0.669\), not \(49/71\): the lock is not a SN fit.
+No \(\chi^2\) in any row above. SN’s own \(\Omega\) minimum is \(\approx 0.669\), not \(\ln 2\): the lock is not a SN fit. \(49/71\), \(49/120\), \(71/120\) were the 12-fold images of \(\ln 2\), \(r\), \(1-r\).
 
 ## What the data do (tests, not the proof)
 

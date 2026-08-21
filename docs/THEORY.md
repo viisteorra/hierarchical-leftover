@@ -1,6 +1,6 @@
 # The theory (one generating function)
 
-Primitive **P**: the vacuum *resonates* on the binary octave \(2:1\). In continuous log-space the measure of one doubling is \(\ln 2\); that residual tail is \(\Omega_{DE}\). The 12-fold / \(49/71\) mix is the unique smallest rational approximation from the fifth. Everything else is lemmas + one measurement \(z_*\).
+Primitive **P**: the vacuum *resonates* on the binary octave \(2:1\). In continuous log-space the measure of one doubling is \(\ln 2\); that residual tail is \(\Omega_{DE}\). The rationals \(49/71\), \(49/120\), \(71/120\) were the 12-fold images of \(\ln 2\), \(r\), and \(1-r\). Leftover addressing is still 12-fold (\(s=12\varphi\), \(12/11\)). Everything else is lemmas + one measurement \(z_*\).
 
 Why the values are not arbitrary, and how to take it further: `FIRST_PRINCIPLES.md`. Proofs: `THEOREM.md`. Hubble sentence: `CLAIM.md`.
 
@@ -12,7 +12,7 @@ Octave \(2:1\) (waves). Fifth \(3:2\) (next integer). Period \(12\) = first cont
 \Omega_{DE}=\ln 2,\qquad r=\frac{\ln 2}{1+\ln 2},\qquad G(\rho)=\frac{1}{1-\rho}=\sum_{k=0}^{\infty}\rho^k.
 \]
 
-\(T=G(r)-1=\ln 2\). The 12-fold fill gives \(T=49/71\approx 0.69014\), a \(0.003\) approximation to \(\ln 2\). FRW \(k=0\): metric leftover is Euclidean hypercubes.
+\(T=G(r)-1=\ln 2\). Then \(r=\ln 2/(1+\ln 2)\) and \(1-r=1/(1+\ln 2)\) (old \(49/120\) and \(71/120\)). FRW \(k=0\).
 
 ## One \(G\), three evaluations, two leftovers
 
@@ -28,7 +28,7 @@ Leftover of two readings of a frozen ruler (photon decoupling \(z_*\)). Density 
 
 | Generating set | Exponent | Probe |
 |---|---|---|
-| Finite (11 hyperbolic steps of the 12-fold) | \(e_\square=(12/11)\,G(r_{12}/11)=1440/1271\) | spatial slices: BAO, weak lensing |
+| Finite (11 hyperbolic steps of the 12-fold) | \(e_\square=(12/11)\,G(r/11)\) | spatial slices: BAO, weak lensing |
 | Infinite (dimensions, continuous \(r\)) | \(e_\infty=1+(1-r)\ln G(r)\) | null metric: \(\theta_*\) |
 | This octave | \(e=0\Rightarrow f=1\) | SN, time delays |
 

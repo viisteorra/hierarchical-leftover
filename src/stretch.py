@@ -1,4 +1,4 @@
-"""Local SN-only distance stretch. Does not touch 49/71, BAO, or CMB.
+"""Local SN-only distance stretch. Does not touch ln(2), BAO, or CMB.
 
 S(z) = 1 + δ0 / (1+z)
 
@@ -10,19 +10,11 @@ At z=0, S=1+δ0. At high z, S→1. BAO and CMB never call this function.
 
 from __future__ import annotations
 
-from fractions import Fraction
-
 import numpy as np
 
-from geometry import OMEGA_DE_TODAY, T_DISCRETE, TOTAL
+from geometry import OMEGA_DE_TODAY, TOTAL
 
-# Discrete 12-fold tail (approximation). Stretch does not retune the lock.
-OMEGA_DE = Fraction(49, 71)
-
-# Octave period — same 12 as the 1:11 mix.
-B = int(TOTAL)
-
-assert abs(float(OMEGA_DE) - T_DISCRETE) < 1e-15
+B = int(TOTAL)  # leftover 12-fold addressing
 assert B == 12
 assert abs(OMEGA_DE_TODAY - __import__("math").log(2.0)) < 1e-15
 

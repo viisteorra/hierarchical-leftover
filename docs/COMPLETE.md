@@ -6,9 +6,9 @@ Spine: `THEORY.md`. First principles: `FIRST_PRINCIPLES.md`. Proofs: `THEOREM.md
 
 ## What is in the theorem
 
-- Hierarchy: octave, fifth, period 12, \(q=4,5\), one seed \(1:11\), \(r=49/120\).
+- Hierarchy: octave, fifth, leftover period 12, \(q=4,5\), one seed \(1:11\).
 - One generating function \(G(\rho)=1/(1-\rho)=\sum\rho^k\). Not extra.
-- Density \(T=G(r)-1=\ln 2\), \(w=-1\), \(k=0\), \(\Omega_m=1-\ln 2\). The 12-fold \(49/71\) is the rational approximation.
+- Density \(T=G(r)-1=\ln 2\), \(r=\ln 2/(1+\ln 2)\), \(1-r=1/(1+\ln 2)\), \(w=-1\), \(k=0\), \(\Omega_m=1-\ln 2\).
 - Leftover: \(\varphi=\{\log_2(1+z_*)\}\), \(f=2^{\varphi e}\), two evaluations of \(G\), no third.
 - Hubble scale: two readings of one FRW. \(H_0\) is not in \(G\).
 

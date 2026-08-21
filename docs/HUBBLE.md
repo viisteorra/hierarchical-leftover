@@ -4,7 +4,7 @@ Leftover \(f\) is Theorem 2; it does not contain \(H_0\). Accounting: `src/hubbl
 
 ## What the tension was
 
-On this lock (\(\Omega_{DE}=49/71\), \(w=-1\)):
+On this lock (\(\Omega_{DE}=\ln 2\), \(w=-1\)):
 
 | | \(H_0\) | vs SN \(73.47\pm 1.04\) |
 |---|---|---|
@@ -17,7 +17,7 @@ That is the ordinary Hubble scale split. Stretch, \(w(a)\), stacks, and one left
 
 ## What leftover does
 
-Same \(\varphi=\{\log_2(1+z_*)\}\). BAO reads planar \(f_\square=2^{\varphi\cdot 1440/1271}\). \(\theta_*\) reads infinite Euclidean \(f_\infty=2^{\varphi[1-(1-r)\ln(1-r)]}\).
+Same \(\varphi=\{\log_2(1+z_*)\}\). BAO reads planar \(f_\square=2^{\varphi\cdot(12/11)G(r/11)}\). \(\theta_*\) reads infinite Euclidean \(f_\infty=2^{\varphi[1-(1-r)\ln(1-r)]}\).
 
 **Inverse (early → local).** DESI \(68.38\times f_\square=73.46\) (**0.01σ**). \(\theta_*\)-lock \(67.60\times f_\infty=73.44\) (**0.03σ** in SH0ES \(H_0\) units).
 

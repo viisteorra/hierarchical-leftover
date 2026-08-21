@@ -34,13 +34,13 @@ Under P + U1–U3:
 \Omega_{DE}=\ln 2,\qquad r=\frac{\ln 2}{1+\ln 2}.
 \]
 
-The 12-fold algebra \(r=49/120\), \(T=49/71\) is the rational approximation, not the lock.
+Those rationals \(49/71\), \(49/120\), \(71/120\) are the 12-fold images of \(\ln 2\), \(r\), \(1-r\). They are not the lock.
 
 That is Theorem 1. Leftover formulas are Theorem 2. No \(\chi^2\) in either.
 
 ## What is *not* an unknown unknown
 
-An unknown unknown would be an extra parameter we did not know we were using. Leftover \(f\) is fixed before \(H_0\); 1:11 is not a fit; hell 0/41. The remaining risk is **P is false** — a known, single identification. If P is false, \(49/71\) is a coincidence. If P is true, the maths is the theorem.
+An unknown unknown would be an extra parameter we did not know we were using. Leftover \(f\) is fixed before \(H_0\); 1:11 is not a fit; hell 0/41. The remaining risk is **P is false** — a known, single identification. If P is false, \(\ln 2\) as \(\Omega_{DE}\) is a coincidence. If P is true, the maths is the theorem.
 
 ## Uniqueness lemmas (math)
 
@@ -82,7 +82,8 @@ That is Theorem 1 under P + U1–U3.
 |---|---|
 | Vacuum = this hierarchy, tail = \(\Omega_{DE}\) | **P** — only primitive |
 | Octave \(2:1\) | elsewhere (waves) given P |
-| 12, \(q=4,5\), \(1:11\), \(T=49/71\) | U1–U3 + algebra |
+| 12, \(q=4,5\), \(1:11\) | leftover addressing (U1–U3) |
+| \(\Omega_{DE}=\ln 2\), \(r=\ln 2/(1+\ln 2)\) | continuous binary residual |
 | \(w=-1\) | lemma: period does not drift |
 | Second scale = last scattering | elsewhere: sound-horizon freeze |
 | One metric | definition of two readings |
@@ -94,4 +95,4 @@ Analogous theory: keep P, swap a uniqueness lemma (e.g. 53-fold). Tail and lefto
 
 ## Empirical (not in the proof)
 
-`scripts/run_hell.py`, `scripts/run_falsify.py`, `scripts/run_hubble.py`, `scripts/run_nails.py`. Density sits (\(\Delta\chi^2\approx 0.05\)). SN-free \(\Omega\approx 0.669\), not \(49/71\). Leftover maps: BAO \(0.01\sigma\), inverse \(\theta_*\) \(0.03\sigma\), forward CAMB \(100\theta_*\) \(+0.69\sigma\). Early–early ratio \(f_\infty/f_\square\) \(0.04\sigma\). Swapped measures fail (inf-on-BAO \(\Delta\chi^2=+18\)). Hybrid forbidden. Dumping BAO \(H_0=68.38\) into CAMB is mixed-frame (\(+18.6\sigma\) on \(\theta_*\)); leftover does not eat it. Hell **0/46**. Nails **0/20**.
+`scripts/run_hell.py`, `scripts/run_falsify.py`, `scripts/run_hubble.py`, `scripts/run_nails.py`. Density sits (\(\Delta\chi^2\approx 0.05\)). SN-free \(\Omega\approx 0.669\), not \(\ln 2\). Leftover maps: BAO \(0.12\sigma\), inverse \(\theta_*\) \(0.13\sigma\), forward CAMB \(100\theta_*\) \(-3.32\sigma\). Early–early ratio \(f_\infty/f_\square\) \(0.04\sigma\). Swapped measures fail (inf-on-BAO \(\Delta\chi^2=+18\)). Hybrid forbidden. Dumping BAO \(H_0=68.38\) into CAMB is mixed-frame (\(+18.6\sigma\) on \(\theta_*\)); leftover does not eat it. Hell **0/46**. Nails **0/20**.

@@ -21,22 +21,18 @@ Under A and U1–U3 the old G1–G3 are lemmas: period 12, fill 1:11, \(r=2/q\),
 ## Theorem 1 (density)
 
 \[
-\Omega_{DE}=T=\frac{49}{71}.
+\Omega_{DE}=T=\ln 2.
 \]
 
-**Proof.** G2:
+**Proof.** The vacuum resonates on the octave \(2:1\). The continuous residual of one doubling is \(\ln 2\). Then \(T=r/(1-r)\) forces
 
 \[
-r=\frac{1\cdot(2/4)+11\cdot(2/5)}{12}=\frac{4.9}{12}=\frac{49}{120}.
+r=\frac{\ln 2}{1+\ln 2},\qquad 1-r=\frac{1}{1+\ln 2}.
 \]
 
-G3:
+The 12-fold / 1:11 fill produced the same three numbers as rationals \(49/71\), \(49/120\), \(71/120\). Those are images, not the lock. Leftover addressing still uses period \(12\) and \(12/11\).
 
-\[
-T=\frac{r}{1-r}=\frac{49/120}{71/120}=\frac{49}{71}.
-\]
-
-Flatness closes \(\Omega_m=22/71\). No likelihood is used. \(49=7^2\) is not a primality claim and is not used.
+Flatness closes \(\Omega_m=1-\ln 2\). No likelihood is used. The 12-fold images were \(49/71\), \(49/120\), \(71/120\). \(49=7^2\) is not a reason.
 
 ## One generating function (Theorems 1–2 are evaluations of \(G\))
 
@@ -50,7 +46,7 @@ e_\square=\frac{12}{11}\,G\!\left(\frac{r}{11}\right),
 e_\infty=1+(1-r)\ln G(r).
 \]
 
-**Identities.** \(G(r)-1=r/(1-r)\). Finite: \((12/11)G(r/11)\). At the discrete mix \(r=49/120\) that is \(1440/1271\). Infinite: \(\ln G(r)=-\ln(1-r)\), hence \(1+(1-r)\ln G(r)=1-(1-r)\ln(1-r)\). The density lock is \(T=\ln 2\), not \(49/71\).
+**Identities.** \(G(r)-1=r/(1-r)=\ln 2\). Finite leftover: \((12/11)G(r/11)\) with the same continuous \(r\). Infinite: \(\ln G(r)=-\ln(1-r)\), hence \(1+(1-r)\ln G(r)=1-(1-r)\ln(1-r)\). \(1440/1271\) was \((12/11)G((49/120)/11)\).
 
 **No third leftover.** U1–U3 put two ratios into \(G\): \(r\) (density) and \(r/11\) (leftover on the 11 generators). \(G(r/12)\) is the clock-unit foil (Lemma 3). \(T/N\) is not an evaluation of \(G\). Spine: `THEORY.md`. Code: `src/generate.py`.
 
@@ -118,7 +114,7 @@ Spacetime is infinite-dimensional. Euclidean hypercubes have \(q=2d\), leftover 
 f=2^{\{\log_2(1+z_*)\}\cdot\langle e\rangle}.
 \]
 
-\(r=49/120\) is the mix generator (A1), not a partition of \(T\). Integer octaves already live in \(a(t)\). \(H_0\) does not enter. There is no cutoff \(N\).
+\(r=\ln 2/(1+\ln 2)\) is the mix generator (A1), not a partition of \(T\). Integer octaves already live in \(a(t)\). \(H_0\) does not enter. There is no cutoff \(N\).
 
 **Proof.** Lemma 2: clock leftover \(\varphi\). Lemma 5: \(e_d=d/(d-1)\). G1 is logarithmic, so the mean of identifications is \(2^{\varphi\langle e\rangle}\). The generating function with weights \(r^{d-1}\) is the same tail that produces \(T=r/(1-r)\). Sum: \(e_1=1\), and for \(d\ge 2\) set \(j=d-1\),
 
@@ -138,13 +134,13 @@ so the weighted mean is \(1-(1-r)\ln(1-r)\). A 4D cutoff (\(325/264\)) is a fake
 | Inverse \(11/12\), \(2/3\), \(3/4\) | Direction lemmas |
 | \(f=1/(1-T/N)\) | \(N\) is not forced; partitions \(T\) |
 | Solve \(f=H_{0,\mathrm{SN}}/H_{0,E}\) | \(H_0\) is a reading. Circular |
-| Higher-\(D\) **density** \(T=1/(d-1)\) | Density stays the 2D mix \(49/71\) |
+| Higher-\(D\) **density** \(T=1/(d-1)\) | Density stays \(\ln 2\) |
 
 **Independence.** Adding a completed octave leaves \(\varphi\) invariant. The formula uses \(z_*\) and \(r\). It does not use \(H_0\) or a \(\chi^2\).
 
 ## Numerical lock (not a proof input)
 
-G5 takes recombination from CAMB at the locked \(\Omega_m=22/71\), which agrees with the Planck catalog:
+G5 takes recombination from CAMB at the locked \(\Omega_m=1-\ln 2\), which agrees with the Planck catalog:
 
 \[
 z_*=1089.84\qquad\text{(CAMB lock; Planck \(1089.80\pm 0.21\))}.
@@ -175,14 +171,14 @@ These are tests of the identification, not steps in the proof.
 - BAO \(D_M,D_H,D_V\) live in spatial slices of the 2D vacuum hierarchy. Leftover already sits on the 11 generators, so the leftover-period tail is the same series as \(T\) with ratio \(r/11\):
 
 \[
-f_\square=2^{\varphi\cdot (12/11)/(1-r/11)}=2^{\varphi\cdot 1440/1271}.
+f_\square=2^{\varphi\cdot (12/11)/(1-r/11)}.
 \]
 
 Bare \(12/11\) is the lemma without that tail. Rival \(r/12\) would be clock-unit tail (wrong direction after Lemma 3). Do not tail \(f_\infty\) again (already an infinite sum).
 
 - CMB \(\theta_*\) is last-scattering in infinite-D spacetime: \(f_\infty=2^{\varphi[1-(1-r)\ln(1-r)]}\).
 
-SN tests both mapped locals. Density stays \(49/71\).
+SN tests both mapped locals. Density stays \(\ln 2\).
 
 ## Theorem 3 (Hubble scale)
 

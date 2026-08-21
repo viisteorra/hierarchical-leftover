@@ -32,7 +32,7 @@ def leftover_exp_infinite() -> float:
 
 
 def leftover_exp_planar() -> float:
-    """Finite generating set: e_□ = (12/11) G(r/11). 1440/1271 at discrete r.
+    """Finite generating set: e_□ = (12/11) G(r/11) with continuous r.
 
     Clock-unit rival G(r/12) is the inverse-direction tail. Do not use T/N.
     """

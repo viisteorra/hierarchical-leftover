@@ -68,13 +68,15 @@ The *continuous* residual of binary scaling is the Haar measure of one doubling:
 G(\rho)=\frac{1}{1-\rho}=\sum_{k=0}^{\infty}\rho^k,\qquad T=G(r)-1.
 \]
 
-The 12-fold / 1:11 mix is the unique smallest rational approximation of that same resonance (U1–U3):
+The 12-fold / 1:11 mix produced the *same three quantities* as rationals:
 
 \[
-r_{12}=\frac{49}{120},\qquad T_{12}=\frac{49}{71}\approx 0.69014=\ln 2-0.0030.
+\frac{49}{71}\approx\ln 2,\qquad
+\frac{49}{120}\approx\frac{\ln 2}{1+\ln 2}=r,\qquad
+\frac{71}{120}\approx\frac{1}{1+\ln 2}=1-r.
 \]
 
-\(49=7^2\) is not a reason and is not used. Flatness (\(k=0\)) closes \(\Omega_m=1-\ln 2\). The lock is \(\ln 2\), not \(49/71\). Neither is chosen from \(\chi^2\).
+Those fractions are retired. The lock is \(\ln 2\) and \(r=\ln 2/(1+\ln 2)\). \(12\) and \(12/11\) remain leftover addressing, not a second density. \(49=7^2\) is not a reason. Flatness closes \(\Omega_m=1-\ln 2\).
 
 If the period is a constant of the hierarchy, it does not drift, so the residual density does not dilute: \(w=-1\).
 
@@ -82,7 +84,7 @@ If the period is a constant of the hierarchy, it does not drift, so the residual
 
 A scale-invariant octave has no intrinsic count of octaves between “then” and “now.” Leftover needs a *second scale*. BAO and \(\theta_*\) share the sound-horizon ruler, frozen at photon decoupling. That freeze-out is the second scale. Not \(H_0\). Not \(z_{\mathrm{eq}}\). Drag \(z_d\) is a foil.
 
-Integer octaves already live in \(a(t)\). Density is continuous \(\ln 2\). **Leftover is still 12-fold:** the same binary address is *read* in equal 12-fold steps of the period (U1). That lattice is the remnant. It is not discarded with \(49/71\).
+Integer octaves already live in \(a(t)\). Density is continuous \(\ln 2\). **Leftover addressing is still 12-fold:** the same binary address is *read* in equal 12-fold steps of the period (U1). \(r\) in \(G(r/11)\) is the continuous mix, not \(49/120\).
 
 \[
 \log_2(1+z_*)=n+\varphi,\qquad s=12\varphi,\qquad f=2^{(s/12)e}=2^{\varphi e}.
@@ -112,7 +114,7 @@ H_{0,L}=f\,H_{0,E}.
 | Temptation | Why it is not this theory |
 |---|---|
 | Pick \(12\) because it fitted \(\Omega_{DE}\) | \(12\) is U1 from \(\log_2(3/2)\), before any catalogue |
-| Pick \(1:11\) from \(\chi^2\) | One seed. SN prefers \(\Omega\approx 0.669\), not \(49/71\) |
+| Pick \(1:11\) from \(\chi^2\) | One seed for leftover addressing. SN prefers \(\Omega\approx 0.669\), not \(\ln 2\) |
 | Pick \(f\) so that \(H_{0,\mathrm{SN}}/H_{0,E}\) matches | \(f=2^{\varphi e}\) from \(z_*\) and \(r\) only |
 | Use \(T/10\) because it is close | \(N=10\) is not in the hierarchy; \(G\) does not partition \(T\) |
 | Nest \(11^2\), scan \(n_4:n_5\), average dimensions of density | Other axioms, or they worsen DESI vs Planck |

@@ -89,7 +89,7 @@ def main() -> int:
     print("=" * 72)
     print("HUBBLE SCALE  given P  (f not fitted to H0)")
     print("=" * 72)
-    print(f"  Ω_DE={OMEGA_DE_TODAY:.6f}=49/71  w=-1")
+    print(f"  Ω_DE={OMEGA_DE_TODAY:.6f}=ln2  w=-1")
     print(f"  f_□={sol['f_box']:.6f}  f_∞={sol['f_inf']:.6f}  f_∞/f_□={sol['ratio_f']:.6f}")
     print(f"  SN H0={h0_sn:.3f}  DESI+rd={h0_bao:.3f}  θ*-lock={sol['h0_th']:.4f}")
 

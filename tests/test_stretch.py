@@ -2,7 +2,7 @@
 
 import numpy as np
 
-from geometry import T_DISCRETE
+from geometry import TOTAL
 from hde_stretch_reference import B, OMEGA_DE, OMEGA_DE_FLOAT, REFERENCE_STRETCH
 from stretch import stretch_S, stretch_dmu
 
@@ -10,7 +10,8 @@ from stretch import stretch_S, stretch_dmu
 def test_lock_is_forty_nine_over_seventy_one():
     assert OMEGA_DE.numerator == 49
     assert OMEGA_DE.denominator == 71
-    assert abs(OMEGA_DE_FLOAT - T_DISCRETE) < 1e-15
+    assert abs(float(OMEGA_DE) - 49 / 71) < 1e-15  # cohesion table, not the lock
+    assert TOTAL == 12
     assert B == 12
 
 

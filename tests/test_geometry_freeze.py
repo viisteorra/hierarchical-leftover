@@ -22,14 +22,10 @@ def test_source_still_hardcodes_the_1_11_rule():
 
 def test_exact_rational_tail():
     import math
-    from geometry import T_DISCRETE
 
     assert abs(OMEGA_DE_TODAY - math.log(2.0)) < 1e-15
-    assert abs(T_DISCRETE - 49 / 71) < 1e-12
+    assert abs(r - math.log(2.0) / (1.0 + math.log(2.0))) < 1e-15
     assert Q4_WEIGHT / Q5_WEIGHT == 1 / 11
-    from geometry import R_DISCRETE
-
-    assert abs(R_DISCRETE - 49 / 120) < 1e-12
 
 
 def test_leftover_theorem_is_infinite_euclidean_tail():

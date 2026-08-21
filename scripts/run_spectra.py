@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """CAMB TT peaks at the early reading.
 
-Early H0 is the θ* lock 67.5991 on Ω_m=22/71, not BAO 68.38 (mixed frame).
+Early H0 is the θ* lock on Ω_m=1-ln2, not BAO H0 (mixed frame).
 """
 
 from __future__ import annotations
@@ -71,7 +71,7 @@ def main() -> int:
     print("=" * 72)
     print("CAMB spectra  early reading")
     print("=" * 72)
-    print(f"  lock Ω_m={OMEGA_M:.6f}=22/71  H0_θ={H0_TH}  f_∞={F_CMB:.6f}")
+    print(f"  lock Ω_m={OMEGA_M:.6f}=1-ln2  H0_θ={H0_TH}  f_∞={F_CMB:.6f}")
     lock = run(H0_TH, OMEGA_M)
     fid = run(H0_PL, 0.3153)
     print(f"  lock  100θ*={lock['100theta']:.5f}  rd={lock['rd']:.2f}  z*={lock['zstar']:.2f}")

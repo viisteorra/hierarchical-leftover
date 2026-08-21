@@ -8,13 +8,13 @@ A 0-parameter geometric lock of the present-day dark-energy density, and a lefto
 \Omega_{DE}=\ln 2\approx 0.693147,\qquad w=-1,\qquad k=0.
 \]
 
-The 12-fold mix \(49/71\approx 0.69014\) is the unique smallest rational approximation, not the lock.
+\(49/71\), \(49/120\), \(71/120\) were the 12-fold images of \(\ln 2\), \(r\), and \(1-r\). They are not the lock. Leftover addressing is still 12-fold.
 
 The Hubble *scale* split on this lock is leftover of two readings, not two universes. Leftover \(f\) does not contain \(H_0\).
 
 P is an identification, not a theorem of GR or QFT. If P is false, the numbers are a coincidence.
 
-The vacuum assumes this geometry **because it resonates**: an octave-addressed hierarchy with one tonic, not a bag of fitted constants. Why \(12\), \(1:11\), \(49/71\), and the two leftover evaluations are forced — and how to extend the theory without fishing — is [`docs/FIRST_PRINCIPLES.md`](docs/FIRST_PRINCIPLES.md). Spine: [`docs/THEORY.md`](docs/THEORY.md). Hubble sentence: [`docs/CLAIM.md`](docs/CLAIM.md).
+The vacuum assumes this geometry **because it resonates**: an octave-addressed hierarchy with one tonic, not a bag of fitted constants. Why \(12\), \(1:11\), \(\ln 2\), and the two leftover evaluations are forced — and how to extend the theory without fishing — is [`docs/FIRST_PRINCIPLES.md`](docs/FIRST_PRINCIPLES.md). Spine: [`docs/THEORY.md`](docs/THEORY.md). Hubble sentence: [`docs/CLAIM.md`](docs/CLAIM.md).
 
 ## From first principles (short)
 
@@ -24,8 +24,8 @@ Resonance, not a fit:
 2. **Fifth \(3:2\).** Next integer ratio. Closing fifths against octaves is \(\log_2(3/2)\).
 3. **Period \(12\).** First continued-fraction convergent of \(\log_2(3/2)\) *after* \(3/5\) is \(7/12\). Semi-convergents (\(4/7\)) are not best approximations. No cents cut is an input.
 4. **Squares \(q=4,5\).** Metric leftover uses Euclidean hypercubes \(q=2d\) \(\Rightarrow\) \(2\)D is the square. First hyperbolic square tiling is \(q=5\). Generation \(r=2/q\).
-5. **One seed \(\Rightarrow 1:11\).** A period has one identity. Other fills are other axioms, not a \(\chi^2\) scan. SN’s own \(\Omega\) minimum is \(\approx 0.669\), not \(49/71\).
-6. **Tail \(G(\rho)=1/(1-\rho)\).** Continuous residual of one doubling: \(\Omega_{DE}=\ln 2\). \(r=\ln 2/(1+\ln 2)\). The 12-fold gives \(49/71\), a \(0.003\) approximation. \(w=-1\), \(k=0\).
+5. **One seed \(\Rightarrow 1:11\).** Leftover addressing: a period has one identity. Not a \(\chi^2\) scan. SN’s own \(\Omega\) minimum is \(\approx 0.669\), not \(\ln 2\).
+6. **Tail \(G(\rho)=1/(1-\rho)\).** \(\Omega_{DE}=\ln 2\), \(r=\ln 2/(1+\ln 2)\), \(1-r=1/(1+\ln 2)\). \(w=-1\), \(k=0\).
 7. **Leftover.** Scale invariance forbids leftover without a second scale: photon decoupling, not \(H_0\). Same \(G\), two licensed ratios: \(r/11\) (finite generators, BAO) and \(\ln G(r)\) (infinite dimensions, \(\theta_*\)). This octave (SN) has \(f=1\).
 
 None of those numbers is a Hubble ratio. \(f=2^{\{\log_2(1+z_*)\}e}\) is fixed before \(H_0\).
@@ -48,7 +48,7 @@ OMEGA_DE_TODAY = LN2
 r = LN2 / (1.0 + LN2)
 W = -1.0
 K_CURVATURE = 0
-# 12-fold / 1:11 remains the rational approximation (T=49/71), not the lock.
+# leftover addressing: period 12, 11 generators. Not a second density.
 ```
 
 ## Leftover and Hubble
@@ -57,7 +57,7 @@ Integer octaves of \(a(t)\) already sit in the metric. Density is continuous \(\
 
 | Set | Exponent | Probe |
 |---|---|---|
-| Finite (11 generators of the 12-fold) | \(e_\square=(12/11)G(r_{12}/11)=1440/1271\) | BAO spatial slices |
+| Finite (11 generators of the 12-fold) | \(e_\square=(12/11)G(r/11)\) | BAO spatial slices |
 | Infinite (dimensions) | \(e_\infty=1+(1-r)\ln G(r)\) | CMB \(\theta_*\) |
 | This octave | \(f=1\) | SN, time delays |
 
@@ -104,7 +104,7 @@ Rejecting P is refusing the premise. The *numbers* die if any of:
 - licensed BAO \(\Delta\chi^2\ge 10\)
 - swapped leftover measures beat the licensed assignment
 - CAMB \(100\theta_*\) at \(\mathrm{SN}/f_\infty\) \(\ge 3\sigma\)
-- combined SN+BAO+CMB in flat \(\Lambda\) leaves \(49/71\) at \(\gtrsim 3\sigma\) (full Planck likelihood and official DESI covariance count)
+- combined SN+BAO+CMB in flat \(\Lambda\) leaves \(\ln 2\) at \(\gtrsim 3\sigma\) (full Planck likelihood and official DESI covariance count)
 
 ## Limits
 

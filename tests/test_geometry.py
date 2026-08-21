@@ -9,8 +9,6 @@ from geometry import (
     OMEGA_M,
     Q4_WEIGHT,
     Q5_WEIGHT,
-    R_DISCRETE,
-    T_DISCRETE,
     TOTAL,
     W,
     r,
@@ -32,11 +30,12 @@ def test_continuous_residual_is_ln2():
     assert K_CURVATURE == 0
 
 
-def test_discrete_12_fold_approximates_ln2():
-    assert abs(R_DISCRETE - 49 / 120) < 1e-15
-    assert abs(T_DISCRETE - 49 / 71) < 1e-15
-    assert abs(T_DISCRETE - LN2) < 0.004
-    assert abs(R_DISCRETE - r) < 0.002
+def test_r_and_one_minus_r_are_the_ln2_mix():
+    assert abs(r - LN2 / (1.0 + LN2)) < 1e-15
+    assert abs((1.0 - r) - 1.0 / (1.0 + LN2)) < 1e-15
+    # 49/120 and 71/120 were the 12-fold images of these
+    assert abs(r - 49 / 120) < 0.002
+    assert abs((1.0 - r) - 71 / 120) < 0.002
 
 
 def test_flatness_closes():

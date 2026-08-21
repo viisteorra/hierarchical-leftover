@@ -9,7 +9,7 @@ Uniqueness U1–U3: `AXIOMS.md`. Continuous lock and leftover: `THEOREM.md`, `TH
 \Omega_{DE}=\ln 2\approx 0.693147,\qquad w=-1,\qquad k=0,\qquad \Omega_m=1-\ln 2.
 \]
 
-The 12-fold / 1:11 mix \(T=49/71\approx 0.69014\) is the rational approximation (\(\Delta=0.003\)). At that discrete \(r\), \(e_\square=1440/1271\). Not a \(\chi^2\) retune.
+\(r=\ln 2/(1+\ln 2)\), \(1-r=1/(1+\ln 2)\) (old \(49/120\), \(71/120\)). Leftover addressing is still 12-fold. Not a \(\chi^2\) retune.
 
 Official DESI DR2 13×13 covariance. SN lock \(\Delta\chi^2=1.77\) vs free \(\Omega\). BAO \(\chi^2=11.42\) on 12 dof.
 
@@ -19,6 +19,7 @@ Official DESI DR2 13×13 covariance. SN lock \(\Delta\chi^2=1.77\) vs free \(\Om
 
 \[
 f_\square=2^{\varphi\cdot(12/11)G(r/11)}\approx 1.074275
+\quad\text{(BAO; }1440/1271\text{ was the }49/120\text{ image)}
 \quad\text{(BAO, finite generating set)}
 \]
 \[
@@ -37,7 +38,7 @@ Raw lock split: SN \(73.50\) vs DESI+\(r_d\) \(68.54\) = \(4.97\) km/s (**4.70σ
 | forward | SN \(73.50\) | \(/f_\square\) | **68.42** | DESI+\(r_d\) \(68.54\) |
 | forward | SN \(73.50\) | \(/f_\infty\) | **67.66** | CAMB \(100\theta_*=1.04007\), **−3.32σ** |
 
-K2 \(\Delta\chi^2=+0.36\). Hybrid unused. First peak \(\ell=220\). Inverse maps close the SH0ES-scale split. Forward CAMB \(\theta_*\) at leftover-predicted \(H_0\) is **−3.32σ** because \(\Omega_m=1-\ln 2\) is lower than the discrete \(22/71\); leftover \(f\) does not contain \(H_0\) and does not eat that shape.
+K2 \(\Delta\chi^2=+0.36\). Hybrid unused. First peak \(\ell=220\). Inverse maps close the SH0ES-scale split. Forward CAMB \(\theta_*\) at leftover-predicted \(H_0\) is **−3.32σ** because \(\Omega_m=1-\ln 2\); leftover \(f\) does not contain \(H_0\) and does not eat that shape.
 
 ## What is solved
 

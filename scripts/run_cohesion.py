@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Cohesion campaign. Do not change 49/71. Do not stretch BAO or CMB.
+"""Cohesion campaign. Do not change ln(2). Do not stretch BAO or CMB.
 
 Stage A — lock Ω_DE, no stretch (the original claim).
 Stage B — one SN-only parameter δ0 (local octave layer, phenomenological).
@@ -30,7 +30,7 @@ from likelihood import (  # noqa: E402
     load_des_dovekie,
     load_pantheon_plus,
 )
-from stretch import B, OMEGA_DE  # noqa: E402
+from stretch import B  # noqa: E402
 
 DATA = ROOT / "data"
 RESULTS = ROOT / "results"
@@ -53,7 +53,7 @@ def main() -> int:
     print("=" * 64)
     print("Cohesion — Stages A, B, C")
     print("=" * 64)
-    print(f"  lock Ω_DE = {float(OMEGA_DE):.12f}  = 49/71")
+    print(f"  lock Ω_DE = {OMEGA_DE_TODAY:.12f}  = ln(2)")
     print(f"  B (octave period) = {B}")
     print(f"  mix = {Q4_WEIGHT}:{Q5_WEIGHT}")
     print("  SN stretch: S=1+δ0/(1+z)   BAO/CMB: never stretched")
@@ -116,7 +116,7 @@ def main() -> int:
     print("Stage B stretch is SN-only and phenomenological.")
 
     payload = {
-        "lock": float(OMEGA_DE),
+        "lock": float(OMEGA_DE_TODAY),
         "B": B,
         "stage_A": {
             "pantheon": a_p,

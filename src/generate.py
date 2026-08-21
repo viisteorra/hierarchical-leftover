@@ -16,7 +16,7 @@ from __future__ import annotations
 
 import math
 
-from geometry import Q5_WEIGHT, R_DISCRETE, TOTAL, r as R_GEN
+from geometry import Q5_WEIGHT, TOTAL, r as R_GEN
 
 PERIOD = int(TOTAL)  # 12
 GENERATORS = int(Q5_WEIGHT)  # 11
@@ -49,12 +49,12 @@ def density_tail() -> float:
 
 
 def leftover_exp_finite() -> float:
-    """12-fold leftover on the 11 generators: (12/11) G(r_12/11) = 1440/1271.
+    """Planar leftover: (12/11) G(r/11) with continuous r=ln2/(1+ln2).
 
-    Leftover is a *reading* of the continuous octave, so it uses the 12-fold
-    lattice r=49/120, not the continuous mix. Density stays ln(2).
+    12/11 is leftover addressing (period / generators), not 49/71.
+    r is the same continuous mix as density. 1440/1271 was (12/11)G((49/120)/11).
     """
-    return (PERIOD / GENERATORS) * G(float(R_DISCRETE) / GENERATORS)
+    return (PERIOD / GENERATORS) * G(R_GEN / GENERATORS)
 
 
 def leftover_exp_infinite() -> float:
@@ -63,15 +63,15 @@ def leftover_exp_infinite() -> float:
 
 
 def leftover_exp_clock_foil() -> float:
-    """r/12 tail on the 12-fold lattice. Lemma 3: leftover lives on the 11."""
-    return (PERIOD / GENERATORS) * G(float(R_DISCRETE) / PERIOD)
+    """r/12 tail. Lemma 3: leftover lives on the 11, not the clock."""
+    return (PERIOD / GENERATORS) * G(R_GEN / PERIOD)
 
 
 def licensed_ratios() -> dict[str, float]:
-    """Continuous mix for density; 12-fold generator ratio for planar leftover."""
+    """Continuous r for density and leftover. 12/11 is the leftover step ratio only."""
     return {
         "mix": float(R_GEN),
-        "generators": float(R_DISCRETE) / GENERATORS,
+        "generators": float(R_GEN) / GENERATORS,
     }
 
 

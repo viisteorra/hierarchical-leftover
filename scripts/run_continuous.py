@@ -13,7 +13,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from bao import DESI_DR2, PLANCK_RD_MPC, bao_chi2, fit_h0_given_rd  # noqa: E402
 from cosmology import shift_parameter_R  # noqa: E402
-from geometry import LN2, OMEGA_DE_TODAY, OMEGA_M, R_DISCRETE, T_DISCRETE, W, r as R_GEN  # noqa: E402
+from geometry import LN2, OMEGA_DE_TODAY, OMEGA_M, W, r as R_GEN  # noqa: E402
 from hubble import SIG_BAO, SIG_PLANCK_H0, SIG_SN, solution, tension  # noqa: E402
 from likelihood import (  # noqa: E402
     PLANCK_R,
@@ -44,8 +44,7 @@ def main() -> int:
     print("CONTINUOUS LOCK  Ω_DE = ln(2)  w=-1  k=0  official DESI DR2 cov")
     print("=" * 72)
     print(f"  Ω_DE={OMEGA_DE_TODAY:.12f}  Ω_m={OMEGA_M:.12f}  r={R_GEN:.12f}")
-    print(f"  discrete 12-fold T={T_DISCRETE:.12f}=49/71  Δ={T_DISCRETE-LN2:+.6f}")
-    print(f"  discrete r={R_DISCRETE:.12f}=49/120")
+    print(f"  1−r=1/(1+ln2)={(1.0-R_GEN):.12f}  (was 71/120)")
     print(f"  z*={ZSTAR_RECOMB}  f_□={F_BAO:.6f}  f_∞={F_CMB:.6f}")
     print(f"  w={W}")
     print()
@@ -74,7 +73,7 @@ def main() -> int:
         "omega_de": OMEGA_DE_TODAY,
         "omega_m": OMEGA_M,
         "r": R_GEN,
-        "T_discrete": T_DISCRETE,
+        "one_minus_r": 1.0 - R_GEN,
         "f_box": F_BAO,
         "f_inf": F_CMB,
         "sn": sn,

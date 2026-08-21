@@ -59,10 +59,9 @@ def test_no_h0_in_leftover_formula():
 
 def test_exponents_are_the_lemmas():
     from generate import G
-    from geometry import R_DISCRETE as _RD
+    from geometry import r as R_GEN
 
-    assert abs(leftover_exp_planar() - (12 / 11) * G(float(_RD) / 11)) < 1e-15
-    assert abs(leftover_exp_planar() - 1440 / 1271) < 1e-15
+    assert abs(leftover_exp_planar() - (12 / 11) * G(R_GEN / 11)) < 1e-15
     e = leftover_exp_infinite()
     assert abs(e - (1.0 - (1.0 - r) * __import__("math").log(1.0 - r))) < 1e-15
 

@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from geometry import LN2, OMEGA_DE_TODAY, T_DISCRETE, W  # noqa: E402
+from geometry import OMEGA_DE_TODAY, W  # noqa: E402
 from hubble import solution  # noqa: E402
 from spacetime import ZSTAR_RECOMB  # noqa: E402
 from uniqueness import PERIOD_N, SEED, HYPER_STEPS  # noqa: E402
@@ -19,8 +19,8 @@ def main() -> int:
     s = solution()
     print("SOLUTION  given P  continuous")
     print(
-        f"  Ω_DE=ln2={OMEGA_DE_TODAY:.6f}  discrete 12-fold {float(T_DISCRETE):.6f}=49/71  "
-        f"period {PERIOD_N} seed {SEED}:{HYPER_STEPS}  w={W}"
+        f"  Ω_DE=ln2={OMEGA_DE_TODAY:.6f}  r=ln2/(1+ln2)  "
+        f"period {PERIOD_N} leftover steps 1:{11}  w={W}"
     )
     print(f"  z*={ZSTAR_RECOMB}  f_□={s['f_box']:.6f}  f_∞={s['f_inf']:.6f}")
     print(

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Joint SN + BAO + CMB-R test of the locked Ω_DE = 49/71."""
+"""Joint SN + BAO + CMB-R test of the locked Ω_DE = ln(2)."""
 
 from __future__ import annotations
 
